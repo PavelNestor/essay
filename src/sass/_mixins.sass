@@ -1,15 +1,16 @@
 $font-size: 2.4rem
 $font-family: "Montserrat"
+$font-family-accent: "Playfair Display"
 $line-height: 1.4em
 $font: #{$font-size}/#{$line-height} #{$font-family}, "Montserrat", sans-serif
-$color: #404040
+$color: #828282
 $main-color: #eee
 $main-color-hover: #ccc
 $success-color: #5cb85c
 $warning-color: #f0ad4e
 $info-color: #5bc0de
 $error-color: #ff5656
-$base-font-color: #353434
+$base-font-color: #828282
 
 @mixin max-lines ($lines:1, $line-height: $line-height)
   max-height: $line-height * $lines
@@ -35,7 +36,7 @@ $screen-sm-plus:             1024px
 $screen-sm-plus-min:         $screen-sm
 
 // Medium screen / desktop
-$screen-md:                  1200px
+$screen-md:                  1100px
 $screen-md-min:              $screen-md
 $screen-desktop:             $screen-md-min
 
@@ -65,7 +66,7 @@ $media-lg-only: '(min-width: $screen-lg) and (max-width: $screen-lg-max)'
 
 $media-md-down: '(max-width: $screen-md-max)'
 $media-md: #{$media-md-down}
-$media-md-up: '(min-width: $screen-md)'
+$media-md-up: '(min-width: #{$screen-md})'
 $media-md-only: '(min-width: $screen-md) and (max-width: $screen-md-max)'
 
 $media-md-sm: '(min-width: $screen-sm) and (max-width: $screen-md-max)'

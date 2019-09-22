@@ -1,0 +1,66 @@
+include mixins
+
+.main__nav-wrap
+  include navigation
+section.container.container_right.main
+
+  .main__content
+
+    .main__card-big
+      .card-big__title
+        h1 
+          +title('The best students essay writing service from east to west')
+
+      ul.list
+        li.list__item Writing your successful essay!
+        li.list__item We make your writing dreams come true, bright and sound with our help 24/7!
+        li.list__item Get your order in few steps and succeed in a day!
+        li.list__item Our company helps you to create first-rate academic writing prepared by our pro essay writers!
+
+      form.form(action='#')
+        .form__group.form__group_main
+          input.search-form__input(type='text', placeholder='Enter your topic, keywords, subject, assignment...')
+          img.search-form__icon(src="/img/icons/search.svg", alt="search")
+
+    .main__card-small
+      .card-small__title
+        .card-small__slash \
+        h4
+          +title('Calculate your price')
+
+      form.form(action="#")
+        .form__group.form__group_main
+          .select-style
+            | Type of paper:
+            select.form__input(type='text')
+              option(value='1') Essay
+              option(value='2') Essay
+              option(value='3') Essay
+            //- img.form__icon(src="/img/icons/form-arrow.svg", alt="")
+
+        .form__group.form__group_main
+          .select-style
+            | Academic level:
+            select.form__input(type='text')
+              option(value='1') Undergraduate
+              option(value='2') Undergraduate
+              option(value='3') Undergraduate
+            //- img.form__icon(src="/img/icons/form-arrow.svg", alt="")
+
+        .form__group.form__group_main
+          .select-style
+            | Deadline:
+            select.form__input(type='text')
+              option(value='1') 1 days
+              option(value='2') 4 days
+              option(value='3') 14 days
+            //- img.form__icon(src="/img/icons/form-arrow.svg", alt="")
+
+        .form__group.form__group_main
+          .select-style
+            | Pages:
+            select.form__input(type='text')
+              option(value='1') 1 page
+              option(value='2') 2 page
+              option(value='3') 3 page
+            //- img.form__icon(src="/img/icons/form-arrow.svg", alt="")

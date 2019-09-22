@@ -28,19 +28,18 @@ section
 a
   border: none
   outline: none
-  // color: $main-color
   text-decoration: none
 
 p
-  font-size: 2rem
-  line-height: 2.5rem
-
-span
+  font-size: 1.6rem
+  line-height: 2em
+  color: $color
 
 img
   border: none
   outline: none
-  max-width: 100%
+  width: auto
+  height: 100%
   vertical-align: middle
 
 ul
@@ -54,13 +53,32 @@ ul
       display: inline-block
 
 h1, h2, h3, h4, h5, h6
+  color: #333333
+  font-family: 'Playfair Display', serif
+
   &:first-child
     margin-top: 0
 
 h1
+  font-size: 5rem
+  font-weight: 900
+  line-height: 1.1em
+
 h2
+  font-size: 6rem
+  font-weight: 900
+  line-height: 1em
+
 h3
+  font-size: 4rem
+  font-weight: 900
+  line-height: 1em
+
 h4
+  font-size: 3rem
+  font-weight: 900
+  line-height: 1em
+
 h5
 h6
 
@@ -121,14 +139,11 @@ input[type='number']
 
 // GRID
 .container
-  overflow: hidden
-  margin: 0 auto
-  width: 80%
+  &_left
+    padding-left: $padding
 
-  @media #{$media-sm}
-    padding-left: 1rem
-    padding-right: 1rem
-    width: 100%
+  &_right
+    padding-right: $padding
 
 .hidden
   display: none !important
@@ -198,6 +213,7 @@ input[type='number']
 
 .pull-left
   float: left
+
 .pull-right
   float: right
 
@@ -211,3 +227,86 @@ input[type='number']
     height: 0
     display: table
     clear: both
+
+.main-btn
+  background: $color_accent
+  border-radius: 5rem
+  color: $color_white
+  font-size: 1.2rem
+  font-weight: bold
+  line-height: 1.2em
+  min-width: 10rem
+  padding: 1rem 3rem
+
+  &_black
+    background: $color_primary
+
+//helpers
+.ml-2
+  margin-left: 2rem
+
+.title
+  &__text
+    display: inline
+
+  &__dot
+    color: $color_accent
+    display: inline
+
+
+.list
+  margin: 0
+
+  &__item
+    background: url(/img/icons/list-img.svg) no-repeat left 0.5rem
+    font-size: 1.4rem
+    line-height: 1.4em
+    margin-bottom: .6rem
+    margin-left: -0.1rem
+    padding-left: 4.2rem
+    color: $color_primary
+
+.search-form
+  &__icon
+    position: absolute
+    padding: 2rem
+    right: 0
+
+  &__input
+    width: 100%
+    font-size: 1.4rem
+    border: none
+    padding: 2rem
+    line-height: 1.4em
+    color: $color_primary
+
+.form__group_main
+  position: relative
+
+.select-style
+  font-size: 1.4rem
+  line-height: 3rem
+  padding-right: 2rem
+  background: $color
+  display: flex
+  justify-content: space-between
+  border: none
+  border-bottom: 1px solid #ccc
+  width: 100%
+  overflow: hidden
+  background: url("/img/icons/form-arrow.svg") no-repeat 95% 50%
+
+.select-style select
+    padding: 5px 8px
+    // width: 150%
+    border: none
+    box-shadow: none
+    background: transparent
+    background-image: none
+    -webkit-appearance: none
+
+.select-style select:focus
+    outline: none
+
+    .select-style
+      background: url("/img/icons/form-arrow.svg") no-repeat 95% 50%
