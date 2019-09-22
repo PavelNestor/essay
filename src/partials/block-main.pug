@@ -31,36 +31,48 @@ section.container.container_right.main
       form.form(action="#")
         .form__group.form__group_main
           .select-style
-            | Type of paper:
-            select.form__input(type='text')
-              option(value='1') Essay
-              option(value='2') Essay
-              option(value='3') Essay
-            //- img.form__icon(src="/img/icons/form-arrow.svg", alt="")
+            .select-style__text Type of paper:
+
+            +SelectBox('Essay', [
+              {name: '1 Essay', value: '1'}, 
+              {name: '2 Essay', value: '2'}, 
+              {name: '3 Essay', value: '3'}, 
+              {name: '4 Essay', value: '4'}, 
+              {name: '5 Essay', value: '5'}
+            ])
 
         .form__group.form__group_main
           .select-style
-            | Academic level:
-            select.form__input(type='text')
-              option(value='1') Undergraduate
-              option(value='2') Undergraduate
-              option(value='3') Undergraduate
-            //- img.form__icon(src="/img/icons/form-arrow.svg", alt="")
+            .select-style__text Academic level :
+
+            +SelectBox('Academic level', [
+              {name: '1 Undergraduate', value: '1'}, 
+              {name: '2 Undergraduate', value: '2'}, 
+              {name: '3 Undergraduate', value: '3'}, 
+              {name: '4 Undergraduate', value: '4'}, 
+              {name: '5 Undergraduate', value: '5'}
+            ])
 
         .form__group.form__group_main
           .select-style
-            | Deadline:
-            select.form__input(type='text')
-              option(value='1') 1 days
-              option(value='2') 4 days
-              option(value='3') 14 days
-            //- img.form__icon(src="/img/icons/form-arrow.svg", alt="")
+            .select-style__text Deadline:
+
+            +SelectBox('Deadline', [
+              {name: '1 days', value: '1'}, 
+              {name: '2 days', value: '2'}, 
+              {name: '3 days', value: '3'}, 
+              {name: '4 days', value: '4'}, 
+              {name: '5 days', value: '5'}
+            ])
 
         .form__group.form__group_main
           .select-style
-            | Pages:
-            select.form__input(type='text')
-              option(value='1') 1 page
-              option(value='2') 2 page
-              option(value='3') 3 page
-            //- img.form__icon(src="/img/icons/form-arrow.svg", alt="")
+            .select-style__text Pages:
+
+            +SelectBox('Pages', [
+              {name: '1 page', value: '1'}, 
+              {name: '2 page', value: '2'}, 
+              {name: '3 page', value: '3'}, 
+              {name: '4 page', value: '4'}, 
+              {name: '5 page', value: '5'}
+            ])

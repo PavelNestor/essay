@@ -284,29 +284,90 @@ input[type='number']
   position: relative
 
 .select-style
-  font-size: 1.4rem
-  line-height: 3rem
-  padding-right: 2rem
-  background: $color
+  border-bottom: 1px solid #ccc
+  border: none
   display: flex
   justify-content: space-between
-  border: none
-  border-bottom: 1px solid #ccc
   width: 100%
-  overflow: hidden
-  background: url("/img/icons/form-arrow.svg") no-repeat 95% 50%
 
-.select-style select
-    padding: 5px 8px
-    // width: 150%
-    border: none
-    box-shadow: none
-    background: transparent
-    background-image: none
-    -webkit-appearance: none
+  &__text
+    font-size: 1.4rem
+    line-height: 3rem
 
-.select-style select:focus
+.select-box
+  position: relative
+  display: block
+  width: 50%
+  margin: 0
+  font-size: 1.4rem
+  color: $color_primary
+  margin-right: 2rem
+  text-align: end
+
+  &__current
+    position: relative
+    // box-shadow: 0 ransparentize(#000, 0.9)s
+    cursor: pointer
     outline: none
 
-    .select-style
-      background: url("/img/icons/form-arrow.svg") no-repeat 95% 50%
+    &:focus
+      & + .select-box__list
+        opacity: 1
+        animation-name: none
+        z-index: 10
+
+        .select-box__option
+          cursor: pointer
+
+      .select-box__icon
+        transform: translateY(-50%) rotate(180deg)
+
+  &__icon
+    position: absolute
+    top: 50%
+    right: -2rem
+    transform: translateY(-50%)
+    width: 1rem
+    transition: 0.2s ease
+
+  &__value
+    display: flex
+
+  &__input
+    display: none
+
+    &:checked + .select-box__input-text
+      display: block
+
+  &__input-text
+    display: none
+    width: 100%
+    margin: 0
+    color: $color_primary
+    font-size: 1.4rem
+
+  &__list
+    position: absolute
+    width: 100%
+    padding: 0
+    list-style: none
+    opacity: 0
+    margin: 0
+    z-index: -10
+
+    animation-name: HideList
+    animation-duration: .5s
+    animation-delay: .5s
+    animation-fill-mode: forwards
+    animation-timing-function: step-start
+    box-shadow: 0 transparentize(#000, 0.9)
+
+  &__option
+    display: block
+    padding: 1rem
+    background-color: #fff
+
+    &:hover,
+    &:focus
+      color: #546c84
+      background-color: #fbfbfb
