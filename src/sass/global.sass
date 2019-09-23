@@ -232,6 +232,18 @@ input[type='number']
     display: table
     clear: both
 
+.round-btn
+  background: $color_accent
+  border-radius: 5rem
+  color: $color_white
+  font-size: 1.2rem
+  font-weight: bold
+  line-height: 1.2em
+  padding: 1rem
+  text-align: center
+  width: 4rem
+  height: 4rem
+
 .main-btn
   background: $color_accent
   border-radius: 5rem
@@ -240,7 +252,8 @@ input[type='number']
   font-weight: bold
   line-height: 1.2em
   min-width: 10rem
-  padding: 1rem 3rem
+  padding: 1rem
+  text-align: center
 
   &_black
     background: $color_primary
@@ -254,11 +267,17 @@ input[type='number']
 .ml-2
   margin-left: 2rem
 
+.mr-1
+  margin-right: 1rem
+
 .mt-2
   margin-top: 2rem
 
 .mb-2
   margin-bottom: 2rem
+
+.mb-1_5
+  margin-bottom: 1.5rem
 
 .title
   &__text
@@ -285,8 +304,8 @@ input[type='number']
   &__icon
     position: absolute
     height: 3rem
-    right: 0
-    top: 40%
+    right: 1.1rem
+    top: 35%
 
   &__input
     width: 100%
@@ -393,34 +412,28 @@ input[type='number']
   position: relative
   display: inline-block
   max-width: 100%
-  margin: 0 15px 0 0
+  margin: 0
+  padding-top: .3rem
+  padding-right: .5rem
   
   &::last-child
     margin-right: 0px
 
   &__button
-    padding: 10px 35px 10px 15px
-    background-color: #fff
-    color: #616161
-    border: 1px solid #cecece
-    border-radius: 3px
+    outline: none
+    padding: 0 1.5rem
+    background-color: transparent
+    border: none
+    color: $color_primary
     cursor: pointer
-    width: 210px
-    text-align: left
+    // width: 210px
+    font-size: 1.4rem
+    line-height: 1.4em
+    text-align: right
+    background: url('/img/icons/form-arrow.svg') no-repeat right
 
     &::focus 
       outline: none
-
-    .zmdi-chevron-down 
-      // position: absolute
-      // right: 10px
-      // top: 12px
-      position: absolute
-      top: 50%
-      right: -2rem
-      transform: translateY(-50%)
-      width: 1rem
-      transition: 0.2s ease
 
   &__list 
     position: absolute
@@ -460,6 +473,6 @@ input[type='number']
     transition: all ease-in-out .3s
 
     &:hover 
-      background-color: #1fc69d
-      color: #fff
+      background-color: $color
+      color: $color_primary
       transition: all ease-in-out .3s

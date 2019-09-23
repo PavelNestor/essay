@@ -14,3 +14,8 @@ mixin SelectBox(name, options)
       each option, index in options
         li
           label.select-box__option(for= `${name}-${option.value}` aria-hidden) #{option.name}
+
+mixin mainSelect(name, options)
+  select(name= name, id= name)
+    each option in options
+      option(value= option.value name= option.name class="select-dropdown__list-item") #{option.name}

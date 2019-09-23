@@ -24,8 +24,7 @@ section.container.container_right.main
 
     .main__card-small
       .card-small__title
-        .card-small__slash \
-        h4
+        h4.card-small__header.mb-1_5
           +title('Calculate your price')
 
       form.form(action="#")
@@ -33,25 +32,18 @@ section.container.container_right.main
           .select-style
             .select-style__text Type of paper:
 
-            select#essay(name="Essay")
-              option(value="1" class="select-dropdown__list-item") 1 Essay
-              option(value="2" class="select-dropdown__list-item") 2 Essay
-              option(value="3" class="select-dropdown__list-item") 3 Essay
-              option(value="4" class="select-dropdown__list-item") 4 Essay
-
-            //- +SelectBox('Essay', [
-            //-   {name: '1 Essay', value: '1'}, 
-            //-   {name: '2 Essay', value: '2'}, 
-            //-   {name: '3 Essay', value: '3'}, 
-            //-   {name: '4 Essay', value: '4'}, 
-            //-   {name: '5 Essay', value: '5'}
-            //- ])
+            +mainSelect('essay', [
+              {value: "1", name: "1 Essay"},
+              {value: "2", name: "2 Essay"},
+              {value: "3", name: "3 Essay"},
+              {value: "4", name: "4 Essay"},
+            ])
 
         .form__group.form__group_main
           .select-style
             .select-style__text Academic level :
 
-            +SelectBox('Academic level', [
+            +mainSelect('academic-level', [
               {name: '1 Undergraduate', value: '1'}, 
               {name: '2 Undergraduate', value: '2'}, 
               {name: '3 Undergraduate', value: '3'}, 
@@ -63,7 +55,7 @@ section.container.container_right.main
           .select-style
             .select-style__text Deadline:
 
-            +SelectBox('Deadline', [
+            +mainSelect('deadline', [
               {name: '1 days', value: '1'}, 
               {name: '2 days', value: '2'}, 
               {name: '3 days', value: '3'}, 
@@ -75,7 +67,7 @@ section.container.container_right.main
           .select-style
             .select-style__text Pages:
 
-            +SelectBox('Pages', [
+            +mainSelect('pages', [
               {name: '1 page', value: '1'}, 
               {name: '2 page', value: '2'}, 
               {name: '3 page', value: '3'}, 
@@ -87,3 +79,10 @@ section.container.container_right.main
           .select-style__text Price: 
             span.form__accent-text $6
           a.main-btn.main-btn_transparent.ml-2.menu__btn(href="#") Next Step
+
+  .main__phone-wrap
+    img.main__phone-arrow(src="/img/icons/down-arrow.svg", alt="")
+    .round-btn
+      img(src="/img/icons/phone.svg", alt="")
+
+    a.main__phone-number(href="tel:#") +8 800 000 00   (24/7)

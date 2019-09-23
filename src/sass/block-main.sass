@@ -9,6 +9,35 @@
     height: 10rem
     display: flex
 
+  &__phone
+    &-wrap
+      display: none
+
+      @media #{$media-md-plus-up}
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin-right: -16vw
+        padding: 3rem 0
+        position: relative
+
+    &-number
+      font-weight: bold
+      font-size: 1.4rem
+      line-height: 1.4em
+      color: $color_primary
+      margin-left: 2rem
+
+    &-arrow
+      display: none
+
+      @media #{$media-md-plus-up}
+        display: block
+        position: absolute
+        height: 6.5rem
+        left: 11vw
+        top: -1rem
+
   &__content
     min-height: calc(100vh - 20rem)
     background: url("/img/block-main/main-img.jpg") no-repeat left top/ auto calc(100vh - 20rem)
@@ -50,7 +79,7 @@
 
   &__card-small
     background: $color_bg-grey-two
-    padding: 3.7rem 5rem 1rem
+    padding: 3.7rem 5rem 5rem
     top: 18%
     right: -28.3rem
 
@@ -61,6 +90,18 @@
       &__title
         position: relative
         width: 60%
+
+      &__header
+        @media #{$media-md-plus-up}
+          &::before
+            content: ''
+            position: absolute
+            top: -1rem
+            bottom: -1rem
+            left: -5rem
+            width: 3px
+            transform: rotate(-20deg)
+            background: $color_accent
 
       &__slash
         display: none
@@ -77,15 +118,15 @@
 .form__group_main
   justify-content: space-between
   border-bottom: 1px solid #ccc
-  padding-top: 1rem
+  padding-top: .9rem
 
   &-last
     align-items: center
     display: flex
     justify-content: space-between
-    padding: 2.5rem 0
+    padding: 2.1rem 0
 
 .form__accent-text
   color: $color_accent
-  font-size: 2.8rem
+  font-size: 2.5rem
   font-weight: bold

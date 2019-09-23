@@ -35,32 +35,30 @@ function createSelect() {
     }
   }
   function wrapElement(el, wrapper, i) {
+    const firstElName = el.querySelector('option').getAttribute('name');
     el.parentNode.insertBefore(wrapper, el);
     wrapper.appendChild(el);
 
-    var buttonElement = document.createElement("button"),
+    var buttonElement = document.createElement("div"),
         spanElement = document.createElement("span"),
-        spanText = document.createTextNode("Select Items");
-    iElement = document.createElement("i");
+        spanText = document.createTextNode(firstElName);
     ulElement = document.createElement("ul");
 
     wrapper.className = 'select-dropdown select-dropdown--'+ i;
     buttonElement.className = 'select-dropdown__button select-dropdown__button--' + i;
     buttonElement.setAttribute('data-value', '' );
     spanElement.className = 'select-dropdown select-dropdown--'+ i;
-    iElement.className = 'zmdi zmdi-chevron-down';
     ulElement.className = 'select-dropdown__list select-dropdown__list--'+ i;
     ulElement.id = 'select-dropdown__list-'+ i;
 
     wrapper.appendChild(buttonElement);
     spanElement.appendChild(spanText);
     buttonElement.appendChild(spanElement);
-    buttonElement.appendChild(iElement);
     wrapper.appendChild(ulElement);
   }
   
   function displyUl(element){
-    if(element.tagName == 'BUTTON'){
+    if(element.tagName == 'DIV'){
       selectDropdown = element.parentNode.getElementsByTagName('ul');
       for (var i = 0, len = selectDropdown.length; i < len; i++) {
         selectDropdown[0].classList.toggle("active");
