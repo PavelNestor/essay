@@ -17,7 +17,7 @@ section.container.container_right.main
         li.list__item Get your order in few steps and succeed in a day!
         li.list__item Our company helps you to create first-rate academic writing prepared by our pro essay writers!
 
-      form.form(action='#')
+      form.form.mt-2(action='#')
         .form__group.form__group_main
           input.search-form__input(type='text', placeholder='Enter your topic, keywords, subject, assignment...')
           img.search-form__icon(src="/img/icons/search.svg", alt="search")
@@ -33,13 +33,19 @@ section.container.container_right.main
           .select-style
             .select-style__text Type of paper:
 
-            +SelectBox('Essay', [
-              {name: '1 Essay', value: '1'}, 
-              {name: '2 Essay', value: '2'}, 
-              {name: '3 Essay', value: '3'}, 
-              {name: '4 Essay', value: '4'}, 
-              {name: '5 Essay', value: '5'}
-            ])
+            select#essay(name="Essay")
+              option(value="1" class="select-dropdown__list-item") 1 Essay
+              option(value="2" class="select-dropdown__list-item") 2 Essay
+              option(value="3" class="select-dropdown__list-item") 3 Essay
+              option(value="4" class="select-dropdown__list-item") 4 Essay
+
+            //- +SelectBox('Essay', [
+            //-   {name: '1 Essay', value: '1'}, 
+            //-   {name: '2 Essay', value: '2'}, 
+            //-   {name: '3 Essay', value: '3'}, 
+            //-   {name: '4 Essay', value: '4'}, 
+            //-   {name: '5 Essay', value: '5'}
+            //- ])
 
         .form__group.form__group_main
           .select-style
@@ -76,3 +82,8 @@ section.container.container_right.main
               {name: '4 page', value: '4'}, 
               {name: '5 page', value: '5'}
             ])
+
+        .form__group.form__group_main-last
+          .select-style__text Price: 
+            span.form__accent-text $6
+          a.main-btn.main-btn_transparent.ml-2.menu__btn(href="#") Next Step

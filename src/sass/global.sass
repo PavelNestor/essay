@@ -60,9 +60,13 @@ h1, h2, h3, h4, h5, h6
     margin-top: 0
 
 h1
-  font-size: 5rem
+  font-size: 3.5rem
   font-weight: 900
-  line-height: 1.1em
+  line-height: 1.06em
+  margin-bottom: 3.5rem
+
+  @media #{$media-sm-plus-up}
+    font-size: 5rem
 
 h2
   font-size: 6rem
@@ -241,9 +245,20 @@ input[type='number']
   &_black
     background: $color_primary
 
+  &_transparent
+    background: transparent
+    color: $color_primary
+    border: 1px solid $color_primary
+
 //helpers
 .ml-2
   margin-left: 2rem
+
+.mt-2
+  margin-top: 2rem
+
+.mb-2
+  margin-bottom: 2rem
 
 .title
   &__text
@@ -258,25 +273,27 @@ input[type='number']
   margin: 0
 
   &__item
-    background: url(/img/icons/list-img.svg) no-repeat left 0.5rem
+    background: url(/img/icons/list-img.svg) no-repeat left top
     font-size: 1.4rem
     line-height: 1.4em
-    margin-bottom: .6rem
-    margin-left: -0.1rem
-    padding-left: 4.2rem
+    margin-bottom: 1rem
+    margin-left: 0.5rem
+    padding-left: 3.3rem
     color: $color_primary
 
 .search-form
   &__icon
     position: absolute
-    padding: 2rem
+    height: 3rem
     right: 0
+    top: 40%
 
   &__input
     width: 100%
     font-size: 1.4rem
     border: none
     padding: 2rem
+    padding-right: 7rem
     line-height: 1.4em
     color: $color_primary
 
@@ -360,14 +377,89 @@ input[type='number']
     animation-delay: .5s
     animation-fill-mode: forwards
     animation-timing-function: step-start
-    box-shadow: 0 transparentize(#000, 0.9)
+    // box-shadow: 0 transparentize(#000, 0.9)
 
   &__option
     display: block
     padding: 1rem
-    background-color: #fff
+    background-color: $color_bg-grey
 
     &:hover,
     &:focus
-      color: #546c84
-      background-color: #fbfbfb
+      color: $color_primary
+      background-color: $color
+
+.select-dropdown
+  position: relative
+  display: inline-block
+  max-width: 100%
+  margin: 0 15px 0 0
+  
+  &::last-child
+    margin-right: 0px
+
+  &__button
+    padding: 10px 35px 10px 15px
+    background-color: #fff
+    color: #616161
+    border: 1px solid #cecece
+    border-radius: 3px
+    cursor: pointer
+    width: 210px
+    text-align: left
+
+    &::focus 
+      outline: none
+
+    .zmdi-chevron-down 
+      // position: absolute
+      // right: 10px
+      // top: 12px
+      position: absolute
+      top: 50%
+      right: -2rem
+      transform: translateY(-50%)
+      width: 1rem
+      transition: 0.2s ease
+
+  &__list 
+    position: absolute
+    display: block
+    left: 0
+    right: 0
+    max-height: 300px
+    overflow: auto
+    margin: 0
+    padding: 0
+    border: 1px solid #cecece
+    border-top: 0px solid transparent
+    list-style-type: none
+    opacity: 0
+    pointer-events: none
+    transform-origin: top left
+    transform: scale(1,0)
+    transition: all ease-in-out .3s
+    z-index: 2
+
+    &.active 
+      opacity: 1
+      pointer-events: auto
+      transform: scale(1,1)
+
+  &__list-item 
+    display: block
+    list-style-type: none
+    padding: 10px 15px
+    background: #fff
+    border-top: 1px solid #e6e6e6
+    font-size: 14px
+    line-height: 1.4
+    cursor: pointer
+    color: #616161
+    text-align: left
+    transition: all ease-in-out .3s
+
+    &:hover 
+      background-color: #1fc69d
+      color: #fff
+      transition: all ease-in-out .3s

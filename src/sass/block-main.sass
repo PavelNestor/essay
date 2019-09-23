@@ -1,6 +1,9 @@
 .main
   // min-height: calc(100vh - 20rem)
-  padding-right: 25vw
+  padding-right: 0
+
+  @media #{$media-md-plus-up}
+    padding-right: 25vw
 
   &__nav-wrap
     height: 10rem
@@ -8,9 +11,13 @@
 
   &__content
     min-height: calc(100vh - 20rem)
-    background: url('/img/block-main/main-img.jpg') no-repeat left top / cover
-    padding: 10rem
+    background: url("/img/block-main/main-img.jpg") no-repeat left top/ auto calc(100vh - 20rem)
+    padding: 5rem 0 0 $padding
     position: relative
+
+    @media #{$media-md-plus-up}
+      padding: 10rem
+      background: url('/img/block-main/main-img.jpg') no-repeat left top / cover
 
   &__bg-img
     object-fit: cover
@@ -19,13 +26,19 @@
 
   &__card-big
     background: $color_bg-yellow
-    padding: 5rem 7.5rem
+    padding: 3rem
     height: 100%
+
+    @media #{$media-md-plus-up}
+      padding: 6.2rem 7.7rem 5rem
 
     .card-big
       &__title
         position: relative
-        width: 60%
+        width: 100%
+
+        @media #{$media-md-plus-up}
+          width: 70%
 
       &__slash
         position: absolute
@@ -36,11 +49,13 @@
         left: -9.5rem
 
   &__card-small
-    position: absolute
-    background: $color_bg-grey
-    padding: 5rem 7.5rem
-    top: 16%
-    right: -30rem
+    background: $color_bg-grey-two
+    padding: 3.7rem 5rem 1rem
+    top: 18%
+    right: -28.3rem
+
+    @media #{$media-md-plus-up}
+      position: absolute
 
     .card-small
       &__title
@@ -48,13 +63,29 @@
         width: 60%
 
       &__slash
-        position: absolute
-        color: $color_accent
-        font-family: $font-family-accent
-        font-size: 10rem
-        line-height: .5em
-        left: -9.5rem
+        display: none
+
+        @media #{$media-md-plus-up}
+          display: block
+          position: absolute
+          color: $color_accent
+          font-family: $font-family-accent
+          font-size: 10rem
+          line-height: .5em
+          left: -9.5rem
 
 .form__group_main
   justify-content: space-between
   border-bottom: 1px solid #ccc
+  padding-top: 1rem
+
+  &-last
+    align-items: center
+    display: flex
+    justify-content: space-between
+    padding: 2.5rem 0
+
+.form__accent-text
+  color: $color_accent
+  font-size: 2.8rem
+  font-weight: bold

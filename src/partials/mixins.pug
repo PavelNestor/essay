@@ -4,13 +4,13 @@ mixin title(text)
 
 mixin SelectBox(name, options)
   .select-box
-    .select-box__current(tabindex= '0')
+    .select-box__current(tabindex= '1')
       each option, index in options
         .select-box__value
-          input.select-box__input(type='radio' id= index+1 value=option.value name=name checked)
+          input.select-box__input(type='radio' id= `${name}-${option.value}` value= option.value name= name checked)
           p.select-box__input-text #{option.name}
       img.select-box__icon(src='/img/icons/form-arrow.svg' alt='' aria-hidden='true')
     ul.select-box__list
       each option, index in options
         li
-          label.select-box__option(for=index aria-hidden) #{option.name}
+          label.select-box__option(for= `${name}-${option.value}` aria-hidden) #{option.name}
