@@ -1,16 +1,60 @@
 .main
   // min-height: calc(100vh - 20rem)
-  padding-right: 25vw
+  padding-right: 0
+
+  @media #{$media-md-plus-up}
+    padding-right: 25vw
 
   &__nav-wrap
-    height: 10rem
+    height: 12rem
     display: flex
+
+    @media #{$media-sm-plus-up}
+      height: 10rem
+
+  &__next-btn
+    margin-right: .6rem
+    min-width: 12rem
+    padding: 1rem
+
+  &__phone
+    &-wrap
+      display: none
+
+      @media #{$media-md-plus-up}
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin-right: -17.5vw
+        padding: 3.5rem 0
+        position: relative
+
+    &-number
+      font-weight: bold
+      font-size: 1.4rem
+      line-height: 1.4em
+      color: $color_primary
+      margin-left: 2rem
+
+    &-arrow
+      display: none
+
+      @media #{$media-md-plus-up}
+        display: block
+        position: absolute
+        height: 8.6rem
+        left: 11.4vw
+        top: -2rem
 
   &__content
     min-height: calc(100vh - 20rem)
-    background: url('/img/block-main/main-img.jpg') no-repeat left top / cover
-    padding: 10rem
+    background: url("/img/block-main/main-img.jpg") no-repeat left top/ auto calc(100vh - 20rem)
+    padding: 5rem 0 0 $padding
     position: relative
+
+    @media #{$media-md-plus-up}
+      padding: 10rem
+      background: url('/img/block-main/main-img.jpg') no-repeat left top / cover
 
   &__bg-img
     object-fit: cover
@@ -19,13 +63,19 @@
 
   &__card-big
     background: $color_bg-yellow
-    padding: 5rem 7.5rem
+    padding: 3.3rem 1.7rem 3.9rem 2.8rem
     height: 100%
+
+    @media #{$media-md-plus-up}
+      padding: 6rem 7.1rem 5rem 7.8rem
 
     .card-big
       &__title
         position: relative
-        width: 60%
+        width: 100%
+
+        @media #{$media-md-plus-up}
+          width: 70%
 
       &__slash
         position: absolute
@@ -35,23 +85,64 @@
         line-height: .5em
         left: -9.5rem
 
-
   &__card-small
-    position: absolute
-    background: $color_bg-grey
-    padding: 5rem 7.5rem
-    top: 16%
-    right: -30rem
+    background: $color_bg-grey-two
+    padding: 5rem .9rem 5rem 3.1rem
+    top: 12.5rem
+    right: -26.7rem
+
+    @media #{$media-md-plus-up}
+      position: absolute
+      padding: 7.6rem 5rem 5rem 5rem
+      right: -28.2rem
 
     .card-small
       &__title
         position: relative
         width: 60%
 
+      &__header
+        margin-bottom: 1.2rem
+
+        @media #{$media-md-plus-up}
+          &::before
+            content: ''
+            position: absolute
+            top: -1rem
+            bottom: -1rem
+            left: -5rem
+            width: 3px
+            transform: rotate(-20deg)
+            background: $color_accent
+            margin-bottom: 1.5rem
+
       &__slash
-        position: absolute
-        color: $color_accent
-        font-family: $font-family-accent
-        font-size: 10rem
-        line-height: .5em
-        left: -9.5rem
+        display: none
+
+        @media #{$media-md-plus-up}
+          display: block
+          position: absolute
+          color: $color_accent
+          font-family: $font-family-accent
+          font-size: 10rem
+          line-height: .5em
+          left: -9.5rem
+
+.form__group_main
+  justify-content: space-between
+  border-bottom: 1px solid #ccc
+  padding-top: .9rem
+
+  &-last
+    align-items: center
+    display: flex
+    justify-content: space-between
+    padding: 3rem 0
+
+    @media #{$media-md-plus-up}
+      padding: 2.6rem 0
+
+.form__accent-text
+  color: $color_accent
+  font-size: 2.5rem
+  font-weight: bold

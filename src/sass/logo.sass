@@ -4,8 +4,22 @@
     align-items: center
     width: max-content
     margin: 0 auto
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      top: -1rem
+      bottom: -1rem
+      left: -1.3rem
+      width: 3px
+      transform: rotate(-20deg)
+      background: $color_accent
 
     @media #{$media-sm-plus-up}
+      margin-left: 3rem
+
+    @media #{$media-md-up}
       margin: 0
 
 

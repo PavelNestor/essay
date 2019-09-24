@@ -1,0 +1,115 @@
+.recent
+  position: relative
+  padding-left: 0
+
+  @media #{$media-sm-plus-up}
+    padding-left: 11.8vw
+
+  &__picture-cover
+    height: 54vh
+    object-position: top
+
+    @media #{$media-md-up}
+      height: auto
+
+
+  &__content
+    display: flex
+    flex-direction: column
+
+    @media #{$media-md-up}
+      flex-direction: row
+
+  &__title-wrap
+    padding-right: 2rem
+
+    @media #{$media-sm-plus-up}
+      padding-right: 20rem
+
+  &__title
+    font-size: 3.5rem
+    line-height: 1.1em
+
+    @media #{$media-sm-plus-up}
+      font-size: 6rem
+
+  &__essay
+    &-wrap
+      padding-right: 2rem
+      margin-top: 3.3rem
+
+      @media #{$media-sm-plus-up}
+        padding-right: 9rem
+
+    &-top-block
+      display: none
+
+      @media #{$media-md-up}
+        display: block
+        background: $color_bg-grey
+        padding: 6rem 2rem 3rem 5rem
+
+    &-top-title
+      font-size: 4rem
+      line-height: 1em
+
+    &-top-essay
+      display: none
+
+      @media #{$media-md-up}
+        display: block
+        padding: 6rem 5rem
+
+    &-top-btn-wrap
+      margin-left: 5rem
+      display: flex
+      flex-direction: column
+      width: fit-content
+      justify-content: center
+      align-items: center
+
+      &_desktop
+        display: none
+
+        @media #{$media-sm-plus-up}
+          margin-top: 5rem
+          display: flex
+
+        @media #{$media-md-up}
+          margin-top: 0
+
+      &_mobile
+        display: flex
+        margin-top: -2.5rem
+        align-items: flex-end
+        width: 100%
+        padding-right: 1.7rem
+        margin-left: 0
+        margin-bottom: 5rem
+
+        @media #{$media-md-up}
+          display: none
+
+    &-top-btn-text
+      margin: 0
+
+  &__col
+    &:nth-child(1)
+      padding-top: 5.4rem
+      flex-basis: 100%
+      padding-left: 15.3vw
+
+      @media #{$media-md-up}
+        flex-basis: 60%
+        padding-top: 10rem
+        padding-left: 0
+
+    &:nth-child(2)
+      flex-basis: 100%
+      padding-left: 7.5vw
+
+      @media #{$media-md-up}
+        flex-basis: 50%
+
+      @media #{$media-md-plus-up}
+        flex-basis: 40%
