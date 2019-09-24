@@ -1,6 +1,5 @@
 mixin title(text)
   .title__text= text
-    .title__dot .
 
 mixin SelectBox(name, options)
   .select-box
@@ -19,3 +18,45 @@ mixin mainSelect(name, options)
   select(name= name, id= name)
     each option in options
       option(value= option.value name= option.name class="select-dropdown__list-item") #{option.name}
+
+mixin picture(path, alt='')
+  picture.cover
+    source.cover(srcset=`${path}.webp` type="image/webp" alt= alt)
+    source.cover(srcset=`${path}.jpg` type="image/jpeg" alt= alt)
+    img.cover(srcset=`${path}.jpg` alt= alt)
+
+mixin picturePng(path, alt='')
+  picture.cover
+    source.cover(srcset=`${path}.webp` type="image/webp" alt= alt)
+    source.cover(srcset=`${path}.png` type="image/jpeg" alt= alt)
+    img.cover(srcset=`${path}.png` alt= alt)
+
+mixin essay(title, words, date, pages, text)
+  .essay
+    .essay__title= title
+    .essay__details
+      .essay__detail-block.essay__words-block
+        img.essay__detail-img(src='/img/block-recent/words.svg', alt='words')
+        p.essay__detail-text= words
+      .essay__detail-block.essay__date-block
+        img.essay__detail-img(src='/img/block-recent/date.svg', alt='words')
+        p.essay__detail-text= date
+      .essay__detail-block.essay__pages-block
+        img.essay__detail-img(src='/img/block-recent/pages.svg', alt='words')
+        p.essay__detail-text= pages
+    p.essay__text= text
+
+mixin essayTop(title, words, date, pages, text)
+  .essay
+    .essay__title.essay__title_top= title
+    .essay__details
+      .essay__detail-block.essay__words-block
+        img.essay__detail-img(src='/img/block-recent/words.svg', alt='words')
+        p.essay__detail-text= words
+      .essay__detail-block.essay__date-block
+        img.essay__detail-img(src='/img/block-recent/date.svg', alt='words')
+        p.essay__detail-text= date
+      .essay__detail-block.essay__pages-block
+        img.essay__detail-img(src='/img/block-recent/pages.svg', alt='words')
+        p.essay__detail-text= pages
+    p.essay__text= text

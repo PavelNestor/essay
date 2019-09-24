@@ -2,10 +2,12 @@
   display: flex
   align-items: center
   justify-content: space-between
-  padding-top: .5rem
-  padding-bottom: .5rem
+  padding: .9rem 0 .5rem 6vw
   flex-wrap: wrap
   width: 100%
+
+  @media #{$media-md-up}
+    padding: .5rem 7vw 0 7vw
 
   &__burger
     display: block
@@ -31,19 +33,31 @@
     display: flex
     justify-content: center
     width: 100%
+    padding-right: 3vw
 
     @media #{$media-sm-plus-up}
       width: max-content
+      padding-right: 0
 
   &__item
     display: inline-block
     margin: 0 .5rem
 
   &__btn
-    margin: .5rem
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: .8rem .4rem
+    font-size: 1.2rem
+    line-height: 1.1em
+    min-width: 15rem
+    padding: 1.4rem
 
     @media #{$media-sm-plus-up}
+      min-width: 10rem
+      margin: .5rem
       margin-left: 2rem
+      padding: .8rem
 
 .search
   margin: 0 

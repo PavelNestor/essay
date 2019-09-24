@@ -6,12 +6,16 @@
     padding-right: 25vw
 
   &__nav-wrap
-    height: 10rem
+    height: 12rem
     display: flex
 
+    @media #{$media-sm-plus-up}
+      height: 10rem
+
   &__next-btn
-    padding: 1rem 3rem
-    margin-right: 1rem
+    margin-right: .6rem
+    min-width: 12rem
+    padding: 1rem
 
   &__phone
     &-wrap
@@ -21,8 +25,8 @@
         display: flex
         align-items: center
         justify-content: flex-end
-        margin-right: -16vw
-        padding: 3rem 0
+        margin-right: -17.5vw
+        padding: 3.5rem 0
         position: relative
 
     &-number
@@ -59,11 +63,11 @@
 
   &__card-big
     background: $color_bg-yellow
-    padding: 3rem
+    padding: 3.3rem 1.7rem 3.9rem 2.8rem
     height: 100%
 
     @media #{$media-md-plus-up}
-      padding: 6.2rem 7.7rem 5rem
+      padding: 6rem 7.1rem 5rem 7.8rem
 
     .card-big
       &__title
@@ -83,12 +87,14 @@
 
   &__card-small
     background: $color_bg-grey-two
-    padding: 7.3rem 5rem 5rem 5rem
-    top: 13rem
-    right: -27rem
+    padding: 5rem .9rem 5rem 3.1rem
+    top: 12.5rem
+    right: -26.7rem
 
     @media #{$media-md-plus-up}
       position: absolute
+      padding: 7.6rem 5rem 5rem 5rem
+      right: -28.2rem
 
     .card-small
       &__title
@@ -96,6 +102,8 @@
         width: 60%
 
       &__header
+        margin-bottom: 1.2rem
+
         @media #{$media-md-plus-up}
           &::before
             content: ''
@@ -106,6 +114,7 @@
             width: 3px
             transform: rotate(-20deg)
             background: $color_accent
+            margin-bottom: 1.5rem
 
       &__slash
         display: none
@@ -128,7 +137,10 @@
     align-items: center
     display: flex
     justify-content: space-between
-    padding: 2.6rem 0
+    padding: 3rem 0
+
+    @media #{$media-md-plus-up}
+      padding: 2.6rem 0
 
 .form__accent-text
   color: $color_accent
