@@ -47,8 +47,11 @@ picture
 
 .cover
   width: 100%
-  height: auto
+  height: 100%
   object-fit: cover
+
+.op-top
+  object-position: top
 
 ul
   padding: 0
@@ -336,7 +339,7 @@ input[type='number']
     position: absolute
     height: 2.6rem
     right: 1.4rem
-    top: 3rem
+    top: 38%
 
     @media #{$media-sm-plus-up}
       right: 1rem
@@ -534,13 +537,14 @@ input[type='number']
 .accent-block
   position: absolute
   width: $padding
-  height: 50rem
+  height: calc(100% - 54vh - 15rem)
   background: $color_bg-grey
   top: 0
   left: 0
 
-  @media #{$media-sm-plus-up}
+  @media #{$media-md-plus-up}
     top: -10rem
+    height: 50rem
 
 .essay
   margin-bottom: 5.4rem
