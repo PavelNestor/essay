@@ -1,9 +1,20 @@
 .footer
   background: $color_bg-grey
-  padding: 5rem 14vw
+  padding: 5rem 14vw 0
 
   @media #{$media-sm-plus-up}
-    padding: 5.6rem 17.5rem
+    padding: 5.6rem 12.5rem
+    display: flex
+    justify-content: space-between
+    flex-grow: 1
+    flex-shrink: 1
+
+  &__col
+    flex-basis: 33%
+    padding: 0 0 5.6rem
+
+    @media #{$media-sm-plus-up}
+      padding: 0 5rem
 
   &__list
     &-item
@@ -27,12 +38,15 @@
       resize: none
       transition: height .3s
       outline: none
-      margin-top: 2.5rem
+      padding: 2rem 0
 
       &::placeholder
         font-size: 1.4rem
-        color: $color_white
-        margin: .5rem
+        color: $color_primary
+        margin: 1rem 0
+
+    &-btn
+      margin-top: 2.3rem
 
     &-textarea
       margin-top: 0

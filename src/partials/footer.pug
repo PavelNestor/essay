@@ -7,15 +7,15 @@ footer.footer
 
     form#contact-form.footer__form(action="#")
       .form-group
-        input#contact-email.footer__form-input(type="text")
+        input#contact-email.footer__form-input(type="text", placeholder='E-mail')
         span.form-email-error
       .form-group
-        input#contact-name.footer__form-input(type="text")
+        input#contact-name.footer__form-input(type="text", placeholder='Name')
         span.form-name-error
       .form-group
-        textarea.footer__form-input.footer__form-textarea(type="text")
+        textarea.footer__form-input.footer__form-textarea(type="text", placeholder='Enter your message')
         span.form-error
-      button.main-btn.main-btn_transparent(type='submit') Send message
+      button.main-btn.main-btn_transparent.footer__form-btn(type='submit') Send message
 
   .footer__col
     h5.footer__title Contact us
