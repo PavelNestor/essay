@@ -9,6 +9,9 @@
   @media #{$media-md-up}
     padding-bottom: 15rem
 
+  &__accent-block
+    height: calc(100% - 54vh - 36rem)
+
   &__picture-cover
     height: 54vh
     object-position: top
@@ -136,7 +139,7 @@
 
     &:nth-child(2)
       flex-basis: 100%
-      padding-left: 7.5vw
+      padding-left: $padding
 
       @media #{$media-md-up}
         padding-left: 0

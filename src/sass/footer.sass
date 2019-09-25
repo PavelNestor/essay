@@ -1,6 +1,6 @@
 .footer
   background: $color_bg-grey
-  padding: 5rem 14vw 0
+  padding: 5rem 13.4vw 0
 
   @media #{$media-sm-plus-up}
     padding: 5.6rem 12.5rem
@@ -9,6 +9,15 @@
     flex-grow: 1
     flex-shrink: 1
 
+  &__title
+    margin-bottom: 1.6rem
+
+    &_contact
+      margin-bottom: 3.1rem
+
+    &_about
+      margin-bottom: 2.7rem
+
   &__col
     flex-basis: 33%
     padding: 0 0 5.6rem
@@ -16,16 +25,20 @@
     @media #{$media-sm-plus-up}
       padding: 0 5rem
 
+    &:nth-child(2)
+      padding: 0 0 3.1rem
+
   &__list
     &-item
     &-link
       font-size: 1.4rem
-      line-height: 3em
+      line-height: 2.9em
       color: $color_primary
 
   &__contact-wrap
     display: flex
-    margin: 1rem 0
+    margin: 1rem 0 1.6rem
+    align-items: center
 
   &__form
     &-input
@@ -38,7 +51,7 @@
       resize: none
       transition: height .3s
       outline: none
-      padding: 2rem 0
+      padding: 2rem 0 1rem
 
       &::placeholder
         font-size: 1.4rem
@@ -46,7 +59,8 @@
         margin: 1rem 0
 
     &-btn
-      margin-top: 2.3rem
+      margin-top: 1.5rem
+      padding: 1rem 2.7rem
 
     &-textarea
       margin-top: 0

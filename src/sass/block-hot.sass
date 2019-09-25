@@ -25,13 +25,17 @@
       flex-direction: row
 
   &__title-wrap
-    padding-right: 2rem
+    padding-right: 3rem
 
     @media #{$media-sm-plus-up}
 
+  &__btn-more
+    margin-left: 2.1rem
+    margin-right: 0
+
   &__title
     font-size: 3.5rem
-    line-height: 1.1em
+    line-height: 1.15em
 
     @media #{$media-sm-plus-up}
       font-size: 6rem
@@ -46,9 +50,9 @@
 
     &-need-block
       background: $color_bg-yellow
-      padding: 3rem 2rem 3rem 4rem
+      padding: 3.2rem 2rem 3.7rem 4.2rem
       position: static
-      margin-left: -7vw
+      margin-left: -8vw
       z-index: 1
 
       @media #{$media-sm-up}
@@ -65,8 +69,12 @@
         padding: 4rem 15vw 4rem 17rem
 
     &-need-title
-      font-size: 4rem
-      line-height: 1em
+      font-size: 3rem
+      line-height: 1.15em
+      margin-bottom: 2rem
+
+      @media #{$media-md-plus-up}
+        font-size: 4rem
 
     &-btn-wrap
       margin: 9rem 5rem 5rem auto
@@ -87,13 +95,14 @@
         display: flex
         align-items: flex-start
         // width: 100%
-        margin: 3rem auto 3rem 3rem
+        margin: 2rem auto 4.5rem 0
 
         @media #{$media-md-up}
           display: none
 
     &-btn-text
       margin: 0
+      font-family: $font-family_accent
 
   &__topics
     &-wrap
@@ -113,19 +122,22 @@
       font-size: 2rem
       line-height: 1.2em
       color: $color_primary
+      margin-bottom: 1rem
 
     &-arrow
       display: inline-block
       margin: 0 1rem
 
   &__order-btn
-    padding: 1rem 2.5rem
+    padding: 1rem 3.5rem
+
+    @media #{$media-sm-plus-up}
+      padding: 1rem 2.5rem
 
   &__col
     &:nth-child(2)
-      padding-top: 5.4rem
+      padding: 5.2rem 0 0 13.5vw
       flex-basis: 100%
-      padding-left: 10vw
 
       @media #{$media-md-up}
         flex-basis: 60%
@@ -134,6 +146,7 @@
     &:nth-child(1)
       flex-basis: 100%
       padding-left: $padding
+      padding-right: $padding
 
       @media #{$media-md-up}
         padding-left: 0
