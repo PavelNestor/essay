@@ -85,7 +85,7 @@
       &_mobile
         display: flex
         align-items: flex-start
-        width: 100%
+        // width: 100%
         margin: 3rem auto 3rem 3rem
 
         @media #{$media-md-up}
@@ -99,7 +99,8 @@
       display: flex
 
     &-col
-      flex-basis: 50%
+      @media #{$media-sm-plus-up}
+        flex-basis: 50%
       &:nth-child(2)
         display: none
         @media #{$media-md-plus-up}

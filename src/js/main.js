@@ -2,6 +2,7 @@
 
 const _$ = document.querySelector.bind(document);
 const _$$ = document.querySelectorAll.bind(document);
+const faqs = _$$('.faq-item');
 
 
 document.addEventListener('DOMContentLoaded', createSelect, false);
@@ -116,4 +117,78 @@ $(document).ready(function() {
     event.preventDefault()
     feddbackSlider.trigger('prev.owl.carousel');
   });
+
 });
+
+// faq
+const toogleFaqs = item => {
+  console.log('item', item);
+  
+  item.classList.toggle("active");
+  
+  const faqContent = item.nextElementSibling;
+
+  faqContent.style.maxHeight
+    ? (faqContent.style.maxHeight = null)
+    : (faqContent.style.maxHeight = faqContent.scrollHeight + 25 + "px");
+}
+
+faqs.forEach(faq => faq.addEventListener("click", () => toogleFaqs(faq)));
+
+// form validation
+
+// form validation
+var form = _$("#contact-form");
+var email = _$("#contact-email");
+var formName = _$("#contact-name");
+var errorEmail = _$(".form-email-error");
+var errorName = _$(".form-name-error");
+
+email.addEventListener(
+  "input",
+  function(event) {
+    errorEmail.innerHTML = "";
+    errorEmail.className = "form-email-error";
+  },
+  false
+);
+
+formName.addEventListener(
+  "input",
+  function(event) {
+    errorName.innerHTML = "";
+    errorName.className = "form-name-error";
+  },
+  false
+);
+
+form.addEventListener(
+  "submit",
+  function(event) {
+    var emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var isEmail = email.value.length !== 0 && emailRegExp.test(email.value);
+    var isName = formName.value.length === 0;
+
+    if (!isEmail) {
+      errorEmail.innerHTML = "error";
+      errorEmail.className = "form-email-error form-error_active";
+      event.preventDefault();
+      return false;
+    } else {
+      errorEmail.innerHTML = "";
+      errorEmail.className = "form-email-error";
+    }
+    debugger;
+    if (isName) {
+      errorName.innerHTML = "error";
+      errorName.className = "form-name-error form-error_active";
+      event.preventDefault();
+      return false;
+    } else {
+      errorName.innerHTML = "";
+      errorName.className = "form-name-error";
+    }
+  },
+  false
+);
+

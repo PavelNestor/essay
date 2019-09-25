@@ -72,3 +72,9 @@ mixin topicsItem(options)
   .hot__topics-item 
     .hot__topics-text= options.topics
     img.hot__topics-arrow(src='/img/icons/right-arrow.svg', alt='')
+
+mixin faqItem(option)
+  button.faq-item(class!=attributes.class)= option.title
+    img.faq-item__img(src="/img/icons/right-arrow.svg", alt="")
+  .faq-item__content
+    p.faq-item__text= option.text

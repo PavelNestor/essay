@@ -1,1 +1,48 @@
 .footer
+  background: $color_bg-grey
+  padding: 5rem 14vw
+
+  @media #{$media-sm-plus-up}
+    padding: 5.6rem 17.5rem
+
+  &__list
+    &-item
+    &-link
+      font-size: 1.4rem
+      line-height: 3em
+      color: $color_primary
+
+  &__contact-wrap
+    display: flex
+    margin: 1rem 0
+
+  &__form
+    &-input
+      font-size: 1.4rem
+      color: $color_primary
+      border: none
+      background: transparent
+      border-bottom: 1px solid $color_form
+      width: 100%
+      resize: none
+      transition: height .3s
+      outline: none
+      margin-top: 2.5rem
+
+      &::placeholder
+        font-size: 1.4rem
+        color: $color_white
+        margin: .5rem
+
+    &-textarea
+      margin-top: 0
+      height: 8rem
+
+  &__links
+    font-size: 1.64rem
+    line-height: 1.4em
+    color: $color_primary
+    margin-left: 2rem
+
+  &__mail-img
+    width: 1.8rem

@@ -1,2 +1,51 @@
-// footer
+include mixins
+
 footer.footer
+
+  .footer__col
+    h5.footer__title Have any questions?
+
+    form#contact-form.footer__form(action="#")
+      .form-group
+        input#contact-email.footer__form-input(type="text")
+        span.form-email-error
+      .form-group
+        input#contact-name.footer__form-input(type="text")
+        span.form-name-error
+      .form-group
+        textarea.footer__form-input.footer__form-textarea(type="text")
+        span.form-error
+      button.main-btn.main-btn_transparent(type='submit') Send message
+
+  .footer__col
+    h5.footer__title Contact us
+
+    .footer__contact-wrap
+      .round-btn
+        img(src="/img/icons/phone.svg", alt="")
+      a.footer__links(href="tel:+8 800 000 00") +8 800 000 00 (24/7)
+
+    .footer__contact-wrap
+      .round-btn
+        img.footer__mail-img(src="/img/icons/mail.svg", alt="")
+      a.footer__links(href="mailto:email@essayrx.com") email@essayrx.com
+
+    .footer__contact-wrap
+      .round-btn
+        img(src="/img/icons/fb.svg", alt="")
+      a.footer__links(href="#") @essayrx
+
+  .footer__col
+    h5.footer__title About Essayrx
+
+    ul.footer__list
+      li.footer__list-item
+        a.footer__list-link(href='#') FAQ
+      li.footer__list-item
+        a.footer__list-link(href='#') Get custom Essay
+      li.footer__list-item
+        a.footer__list-link(href='#') How to write essay
+      li.footer__list-item
+        a.footer__list-link(href='#') Privacy Policy
+      li.footer__list-item
+        a.footer__list-link(href='#') Terms and conditions

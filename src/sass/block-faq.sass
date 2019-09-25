@@ -144,3 +144,52 @@
 
       @media #{$media-md-plus-up}
         flex-basis: 40%
+
+.faq
+  background: $color_bg-grey-two
+  padding: 5rem 0 5rem $padding
+
+  @media #{$media-sm-plus-up}
+    padding: 10rem 11.8vw
+
+  &__accent
+    height: 14rem
+
+
+.faq-item
+  background-color: $color_white
+  color: $color_primary
+  cursor: pointer
+  padding: 1rem 3rem
+  width: 100%
+  border: none
+  text-align: left
+  outline: none
+  font-size: 2rem
+  font-family: $font-family-accent
+  line-height: 1.2em
+  margin-top: 2rem
+
+  @media #{$media-sm-plus-up}
+    padding: 1.5rem 3.8rem
+
+  &__content
+    padding: 0 3.8rem
+    max-height: 0
+    overflow: hidden
+    transition: max-height 0.2s ease-out
+    background: $color_white
+
+  &__img
+    margin: 0 1rem
+  &__text
+    font-family: $font-family
+    font-size: 1.6rem
+    line-height: 1.9em
+    color: #4F4F4F
+    margin-bottom: 2.5rem 
+
+
+.faq-item.active
+  .faq-item__img
+    transform: rotate(90deg)

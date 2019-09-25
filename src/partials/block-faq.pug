@@ -1,11 +1,44 @@
 include mixins
 
-section.container.recent
-  .accent-block.accent-block_left
-  .recent__content
-    .recent__col
-      .recent__title-wrap
-        h2.recent__title
-          +title('F.A.Q')
+-
+  var faqs = [
+    {
+      title: 'What types of papers can you write?',
+      text: 'These shifts from sunlight to sunset and again to sunlight are shown as time change in Renaissance theatre. If Romeo and Juliet were played at Greek theatre style then we wouldn’t have time changes and it would play continuously; the time change during performance would be announced to audience instead of changing scenes with purpose of showing time change. In conclusion, Romeo and Juliet is the most common love story written by Shakespeare.  '
+    },
+    {
+      title: 'What are the qualifications of the writers you employ?',
+      text: 'These shifts from sunlight to sunset and again to sunlight are shown as time change in Renaissance theatre. If Romeo and Juliet were played at Greek theatre style then we wouldn’t have time changes and it would play continuously; the time change during performance would be announced to audience instead of changing scenes with purpose of showing time change. In conclusion, Romeo and Juliet is the most common love story written by Shakespeare.  '
+    },
+    {
+      title: 'Do you guarantee that I will get my project on time?',
+      text: 'These shifts from sunlight to sunset and again to sunlight are shown as time change in Renaissance theatre. If Romeo and Juliet were played at Greek theatre style then we wouldn’t have time changes and it would play continuously; the time change during performance would be announced to audience instead of changing scenes with purpose of showing time change. In conclusion, Romeo and Juliet is the most common love story written by Shakespeare.  '
+    },
+    {
+      title: 'How can I contact you after placing an order?',
+      text: 'These shifts from sunlight to sunset and again to sunlight are shown as time change in Renaissance theatre. If Romeo and Juliet were played at Greek theatre style then we wouldn’t have time changes and it would play continuously; the time change during performance would be announced to audience instead of changing scenes with purpose of showing time change. In conclusion, Romeo and Juliet is the most common love story written by Shakespeare.  '
+    },
+    {
+      title: 'How will I get my completed paper?',
+      text: 'These shifts from sunlight to sunset and again to sunlight are shown as time change in Renaissance theatre. If Romeo and Juliet were played at Greek theatre style then we wouldn’t have time changes and it would play continuously; the time change during performance would be announced to audience instead of changing scenes with purpose of showing time change. In conclusion, Romeo and Juliet is the most common love story written by Shakespeare.  '
+    },
+    {
+      title: 'Do you offer refunds?',
+      text: 'These shifts from sunlight to sunset and again to sunlight are shown as time change in Renaissance theatre. If Romeo and Juliet were played at Greek theatre style then we wouldn’t have time changes and it would play continuously; the time change during performance would be announced to audience instead of changing scenes with purpose of showing time change. In conclusion, Romeo and Juliet is the most common love story written by Shakespeare.  '
+    },
+    {
+      title: 'Why can I not order a big assignment with a delivery time of a few hours?',
+      text: 'These shifts from sunlight to sunset and again to sunlight are shown as time change in Renaissance theatre. If Romeo and Juliet were played at Greek theatre style then we wouldn’t have time changes and it would play continuously; the time change during performance would be announced to audience instead of changing scenes with purpose of showing time change. In conclusion, Romeo and Juliet is the most common love story written by Shakespeare.  '
+    },
+  ]
 
-      .faq__content text
+section.container.recent.faq
+  .accent-block.accent-block_left.faq__accent
+
+  .recent__title-wrap
+    h2.recent__title
+      +title('F.A.Q')
+
+  .faq__content
+    each faq in faqs
+      +faqItem(faq)(class='faq__item')
