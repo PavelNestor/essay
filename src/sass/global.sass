@@ -308,15 +308,9 @@ input[type='number']
     position: relative
 
     &::after
-      content: ''
-      position: absolute
-      background: $color_accent
-      width: .5rem
-      height: .5rem
-      border-radius: 100%
-      bottom: .8rem
-      right: -0.7rem
-
+      content: '.'
+      color: $color_accent
+      display: inline-block
 
 .list
   margin: 0
@@ -536,15 +530,22 @@ input[type='number']
 
 .accent-block
   position: absolute
-  width: $padding
   height: calc(100% - 54vh - 15rem)
   background: $color_bg-grey
   top: 0
-  left: 0
+  width: $padding
+  z-index: -1
 
   @media #{$media-md-plus-up}
     top: -10rem
     height: 50rem
+
+  &_left
+    left: 0
+
+  &_right
+    right: 0
+
 
 .essay
   margin-bottom: 5.4rem
@@ -587,3 +588,61 @@ input[type='number']
   &__pages-block
   &__text
     margin-top: 1rem
+
+.slide
+  display: flex
+  flex-direction: column
+  align-items: center
+  
+
+  &__img
+    width: 19rem
+    height: 19rem
+
+  &__text
+    font-size: 1.4rem
+
+    @media #{$media-sm-up}
+      font-size: 1.6rem
+
+  &__text-wrap
+    text-align: center
+    width: 28rem
+
+    @media #{$media-xs-up}
+      max-width: 30rem
+      width: auto
+
+  &__title
+    font-family: $font-family-accent
+    font-weight: bold
+    font-size: 2rem
+    line-height: 1.2em
+    color: $color_primary
+
+.owl-stage
+  .owl-item
+    transition: .8s
+    transform: scale(.5) !important
+
+    .slide
+      .slide__text-wrap,
+      .slide__title
+        display: none
+
+.owl-item.active
+    transform: scale(1) !important
+
+    .slide
+      .slide__text-wrap,
+      .slide__title
+        display: block
+
+.owl-carousel 
+  .owl-stage-outer
+        overflow: visible !important
+
+.btn__prev
+  transform: rotate(90deg)
+.btn__next
+  transform: rotate(-90deg)
