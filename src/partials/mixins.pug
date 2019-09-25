@@ -60,3 +60,15 @@ mixin essayTop(title, words, date, pages, text)
         img.essay__detail-img(src='/img/block-recent/pages.svg', alt='words')
         p.essay__detail-text= pages
     p.essay__text= text
+
+mixin slideItem(options)
+  .slide
+    img.slide__img(src= options.src, alt= options.alt)
+    p.slide__title= options.title
+    .slide__text-wrap
+      p.slide__text= options.text
+
+mixin topicsItem(options)
+  .hot__topics-item 
+    .hot__topics-text= options.topics
+    img.hot__topics-arrow(src='/img/icons/right-arrow.svg', alt='')

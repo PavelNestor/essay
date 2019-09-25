@@ -1,13 +1,13 @@
 "use strict";
 
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+const _$ = document.querySelector.bind(document);
+const _$$ = document.querySelectorAll.bind(document);
 
 
 document.addEventListener('DOMContentLoaded', createSelect, false);
 
 function createSelect() {
-  let select = $$('select'),
+  let select = _$$('select'),
       liElement,
       ulElement,
       optionValue,
@@ -18,7 +18,7 @@ function createSelect() {
 
   for (var select_i = 0, len = select.length; select_i < len; select_i++) {
     select[select_i].style.display = 'none';
-    wrapElement($(`#${select[select_i].id}`), document.createElement("div"), select_i);
+    wrapElement(_$(`#${select[select_i].id}`), document.createElement("div"), select_i);
 
     for (var i = 0; i < select[select_i].options.length; i++) {
       liElement =  document.createElement("li");
@@ -85,3 +85,35 @@ function createSelect() {
     }, false);
   }
 }
+
+// OWL carousel
+$(document).ready(function() {
+  const feddbackSlider = $(".owl-carousel");
+  feddbackSlider.owlCarousel({
+    stagePadding: 30,
+    loop: true,
+    margin: 10,
+    responsive: {
+      0: {
+        items: 1
+      },
+      640: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      }
+    }
+  });
+  
+   // Custom Button
+   $('.feedback__slide-btn_next').click(function(event) {
+    event.preventDefault()
+    feddbackSlider.trigger('next.owl.carousel');
+  });
+  
+  $('.feedback__slide-btn_prev').click(function(event) {
+    event.preventDefault()
+    feddbackSlider.trigger('prev.owl.carousel');
+  });
+});
