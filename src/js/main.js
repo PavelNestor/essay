@@ -9,24 +9,24 @@ document.addEventListener('DOMContentLoaded', createSelect, false);
 
 function createSelect() {
   let select = _$$('select'),
-      liElement,
-      ulElement,
-      optionValue,
-      iElement,
-      optionText,
-      selectDropdown,
-      elementParentSpan;
+    liElement,
+    ulElement,
+    optionValue,
+    iElement,
+    optionText,
+    selectDropdown,
+    elementParentSpan;
 
   for (var select_i = 0, len = select.length; select_i < len; select_i++) {
     select[select_i].style.display = 'none';
     wrapElement(_$(`#${select[select_i].id}`), document.createElement("div"), select_i);
 
     for (var i = 0; i < select[select_i].options.length; i++) {
-      liElement =  document.createElement("li");
+      liElement = document.createElement("li");
       optionValue = select[select_i].options[i].value;
       optionText = document.createTextNode(select[select_i].options[i].text);
       liElement.className = 'select-dropdown__list-item';
-      liElement.setAttribute('data-value', optionValue );
+      liElement.setAttribute('data-value', optionValue);
       liElement.appendChild(optionText);
       ulElement.appendChild(liElement);
 
@@ -41,30 +41,30 @@ function createSelect() {
     wrapper.appendChild(el);
 
     var buttonElement = document.createElement("div"),
-        spanElement = document.createElement("span"),
-        spanText = document.createTextNode(firstElName);
+      spanElement = document.createElement("span"),
+      spanText = document.createTextNode(firstElName);
     ulElement = document.createElement("ul");
 
-    wrapper.className = 'select-dropdown select-dropdown--'+ i;
+    wrapper.className = 'select-dropdown select-dropdown--' + i;
     buttonElement.className = 'select-dropdown__button select-dropdown__button--' + i;
-    buttonElement.setAttribute('data-value', '' );
-    spanElement.className = 'select-dropdown select-dropdown--'+ i;
-    ulElement.className = 'select-dropdown__list select-dropdown__list--'+ i;
-    ulElement.id = 'select-dropdown__list-'+ i;
+    buttonElement.setAttribute('data-value', '');
+    spanElement.className = 'select-dropdown select-dropdown--' + i;
+    ulElement.className = 'select-dropdown__list select-dropdown__list--' + i;
+    ulElement.id = 'select-dropdown__list-' + i;
 
     wrapper.appendChild(buttonElement);
     spanElement.appendChild(spanText);
     buttonElement.appendChild(spanElement);
     wrapper.appendChild(ulElement);
   }
-  
-  function displyUl(element){
-    if(element.tagName == 'DIV'){
+
+  function displyUl(element) {
+    if (element.tagName == 'DIV') {
       selectDropdown = element.parentNode.getElementsByTagName('ul');
       for (var i = 0, len = selectDropdown.length; i < len; i++) {
         selectDropdown[0].classList.toggle("active");
       }
-    }else if(element.tagName == 'LI'){
+    } else if (element.tagName == 'LI') {
       var selectId = element.parentNode.parentNode.getElementsByTagName('select')[0];
       selectElement(selectId.id, element.getAttribute('data-value'));
       elementParentSpan = element.parentNode.parentNode.getElementsByTagName('span');
@@ -88,7 +88,7 @@ function createSelect() {
 }
 
 // OWL carousel
-$(document).ready(function() {
+$(document).ready(function () {
   const feddbackSlider = $(".owl-carousel");
   feddbackSlider.owlCarousel({
     stagePadding: 30,
@@ -105,14 +105,14 @@ $(document).ready(function() {
       }
     }
   });
-  
-   // Custom Button
-   $('.feedback__slide-btn_next').click(function(event) {
+
+  // Custom Button
+  $('.feedback__slide-btn_next').click(function (event) {
     event.preventDefault()
     feddbackSlider.trigger('next.owl.carousel');
   });
-  
-  $('.feedback__slide-btn_prev').click(function(event) {
+
+  $('.feedback__slide-btn_prev').click(function (event) {
     event.preventDefault()
     feddbackSlider.trigger('prev.owl.carousel');
   });
@@ -126,7 +126,7 @@ $(document).ready(function() {
 // faq
 const toogleFaqs = item => {
   item.classList.toggle("active");
-  
+
   const faqContent = item.nextElementSibling;
 
   faqContent.style.maxHeight
@@ -147,7 +147,7 @@ var errorName = _$(".form-name-error");
 
 email.addEventListener(
   "input",
-  function(event) {
+  function (event) {
     errorEmail.innerHTML = "";
     errorEmail.className = "form-email-error";
   },
@@ -156,7 +156,7 @@ email.addEventListener(
 
 formName.addEventListener(
   "input",
-  function(event) {
+  function (event) {
     errorName.innerHTML = "";
     errorName.className = "form-name-error";
   },
@@ -165,7 +165,7 @@ formName.addEventListener(
 
 form.addEventListener(
   "submit",
-  function(event) {
+  function (event) {
     var emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var isEmail = email.value.length !== 0 && emailRegExp.test(email.value);
     var isName = formName.value.length === 0;
@@ -210,3 +210,17 @@ const closeMenu = () => {
 
 menuMobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
+(function () {
+  const essayDots = _$$('.essay-page__dots');
+  const essayMoreText = _$$('.essay-page__more');
+
+  essayDots.forEach((dot, index) => dot.addEventListener('click', () => showMore(index)))
+
+  const showMore = (index) => {
+    const essayDot = essayDots[index];
+    const essayMore = essayMoreText[index];
+
+    essayDot.classList.toggle('hidden');
+    essayMore.classList.toggle('active');
+  }
+})()

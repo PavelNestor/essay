@@ -42,7 +42,7 @@ section.container.recent
 
       .recent__essay-wrap
         each essay in essays
-          +essay(essay.title, essay.words, essay.date, essay.pages, essay.text)
+          +essay(essay.title, essay.words, essay.date, essay.pages, essay.text)(href='essay-page.html')
 
       .recent__essay-top-btn-wrap.recent__essay-top-btn-wrap_mobile
         .round-btn.round-btn_more

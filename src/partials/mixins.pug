@@ -33,18 +33,21 @@ mixin picturePng(path, alt='')
 
 mixin essay(title, words, date, pages, text)
   .essay
-    .essay__title= title
-    .essay__details
-      .essay__detail-block.essay__words-block
-        img.essay__detail-img(src='/img/block-recent/words.svg', alt='words')
-        p.essay__detail-text= words
-      .essay__detail-block.essay__date-block
-        img.essay__detail-img(src='/img/block-recent/date.svg', alt='words')
-        p.essay__detail-text= date
-      .essay__detail-block.essay__pages-block
-        img.essay__detail-img(src='/img/block-recent/pages.svg', alt='words')
-        p.essay__detail-text= pages
+    a.essay__title(class!=attributes.class)&attributes(attributes)= title
+    +essayDetails(words, date, pages)
     p.essay__text= text
+
+mixin essayDetails(words, date, pages)
+  .essay__details
+    .essay__detail-block.essay__words-block
+      img.essay__detail-img(src='/img/block-recent/words.svg', alt='words')
+      p.essay__detail-text= words
+    .essay__detail-block.essay__date-block
+      img.essay__detail-img(src='/img/block-recent/date.svg', alt='words')
+      p.essay__detail-text= date
+    .essay__detail-block.essay__pages-block
+      img.essay__detail-img(src='/img/block-recent/pages.svg', alt='words')
+      p.essay__detail-text= pages
 
 mixin essayTop(title, words, date, pages, text)
   .essay
