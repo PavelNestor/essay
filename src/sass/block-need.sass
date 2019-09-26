@@ -2,8 +2,11 @@
 .need-block
   background: $color_bg-yellow
   padding: 3.2rem 2rem 3.7rem 4.2rem
-  margin-left: -8vw
+  width: 100%
   z-index: 1
+
+  @media #{$media-sm-plus-up}
+    width: fit-content
 
   @media #{$media-sm-up}
     padding: 4rem 30vw 4rem 17rem

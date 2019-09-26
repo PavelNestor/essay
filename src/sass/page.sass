@@ -11,21 +11,31 @@
   &__header
     padding: 4.4rem 3.9rem 1.6rem
     display: flex
-    justify-content: space-between
+    justify-content: flex-start
+    flex-wrap: wrap
 
     &-arrow
 
   &__name
     font-weight: 900
     font-size: 2rem
-    line-height: 1.3em
+    line-height: 1.8em
     font-family: $font-family-accent
     color: $color_black
+    margin-left: 4.4rem
 
   &__social-wrap
     display: flex
     justify-content: center
     align-items: center
+    width: 100%
+    margin: 0
+    padding: 4rem 0 0
+
+    @media #{$media-sm-plus-up}
+      width: fit-content
+      margin: 0 1rem 0 auto
+      padding: 0
 
   &__social
     color: $color_black
@@ -35,6 +45,10 @@
     display: flex
     justify-content: center
     align-items: center
+    margin-right: 1rem
+
+  &__btn
+    margin-right: .5rem
 
   &__btn-fb
     background: #3A559F
@@ -45,10 +59,100 @@
   &__btn-telegram
     background: #41B4E6
 
+  &__subtitle
+    font-size: 3rem
+
   &__title
+    margin-left: 10vw
+    margin-bottom: 4rem
+
+    @media #{$media-sm-plus-up}
+      margin-left: 16.6rem
+      margin-bottom: 8rem
 
   &__content
+    display: flex
+    flex-direction: column
+    padding-bottom: 10rem
+
+    @media #{$media-sm-plus-up}
+      flex-direction: row
+
+  &__image-wrap
+    position: relative
+    height: 50vh
+
+    //height: 100vh TODO for horizontal 
+
+    @media #{$media-sm-plus-up}
+      height: auto
+
+    &::after
+      content: ''
+      position: absolute
+      width: 2px
+      transform: rotate(-21deg)
+      background: $color_accent
+      height: 7rem
+      bottom: -3.5rem
+      right: 3vw
+
+  &__image
+    position: relative
+
+  &__text
+    font-size: 1.4rem
+    line-height: 1.8em
+    color: $color_page-text
+
+    @media #{$media-sm-plus-up}
+      font-size: 1.6rem
+
+    &_first
+      margin-top: 0
+
+    &_bold
+      font-weight: bold
+
+  &__list
+    margin: 0
+
+  &__list-item
+    background: url(/img/page/list-img.svg) no-repeat left .8rem
+    font-size: 1.6rem
+    line-height: 1.9em
+    margin-bottom: 1.2rem
+    margin-left: -0.1rem
+    padding-left: 3.5rem
+    color: $color_page-text
+
+  &__col
+    flex-basis: 50%
+    padding-right: 0
+    padding-left: 0
+
+    @media #{$media-sm-plus-up}
+      padding-left: 0
+      padding-right: 10vw
+
+    &:nth-child(1)
+      padding-left: 0
+
+      @media #{$media-sm-plus-up}
+        padding-left: 0
+
+    &:nth-child(2)
+      padding-left: 14vw
+      padding-top: 4rem
+
+      @media #{$media-sm-plus-up}
+        padding-left: 0
+        padding-top: 0
 
   &__need-wrap
+    padding-left: 7vw
     display: flex
     justify-content: flex-end
+
+    @media #{$media-sm-plus-up}
+      padding-left: 0

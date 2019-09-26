@@ -1,4 +1,5 @@
 extends partials/layout
+include partials/mixins
 
 block vars
   - var title = "About us"
@@ -15,22 +16,55 @@ block content
 
       .page__social-wrap
         .page__social.page__social-fb
-          .round-btn.page__btn-fb
+          .round-btn.page__btn.page__btn-fb
             img(src="/img/icons/fb.svg", alt="")
           | 25
         .page__social.page__social-twitter
-          .round-btn.page__btn-twitter
+          .round-btn.page__btn.page__btn-twitter
             img(src="/img/icons/twitter.svg", alt="")
           | 54
         .page__social.page__social-telegram
-          .round-btn.page__btn-telegram
+          .round-btn.page__btn.page__btn-telegram
             img(src="/img/icons/telegram.svg", alt="")
           | 36
 
-    .page__title
+    h1.page__title
+      +title('The company with own philosophy')
+
     .page__content
       .page__col
+        .page__image-wrap
+          +picturePng('/img/page/about', alt='About us')(class='op-top')
+
       .page__col
+        p.page__text.page__text_first Like any other well-known success of individuals or groups determined by the number of followers, and our success is determined by the number of satisfied students. More than 90% of work annually receive an “excellent”. We have something to be proud of! We do not have to be difficult honors with a team of professionals, but it is difficult to compete on this market.
+        p.page__text Not because of the weaknesses of the company, but due to hasty choices that students make.
+        p.page__text Not every resource work in good faith. It’s the Internet. Also, it was not forbidden and banal fraud scam, which takes place in the network. But what can we do? What can we do for you?
+        p.page__text In 2013, writingessayeast.com took part in consumer protection campaign. In a search on the net fake resources to enrich themselves at the credulity of the other students.
+        p.page__text However, as it turned out, this problem can not be solved at the root. In place of the non-functional resource appear new.
+
+        h3.page__subtitle How to avoid fraud?
+
+        p.page__text.page__text_bold What can you do about it:
+
+        ul.page__list
+          li.page__list-item Trust to one company.
+          li.page__list-item Possible to ask all that you are interested in managers.
+          li.page__list-item Be assertive.
+          li.page__list-item Advance search for information on this or that company.
+          li.page__list-item Read reviews of other customers.
+          li.page__list-item Try to check the authenticity of these reviews.
+
+        p.page__text.page__text_bold Also, for convenience, use the services of a resource in writing essays and other academic disciplines, you can use the following tips:
+
+        ul.page__list
+          li.page__list-item Start with small orders. This will reduce the percentage of the lost amount of money if it turns out the resource is not present.
+          li.page__list-item Pre-ordered work. Before the start of training, you can even learn the curriculum, to not order essays at the last moment before the deadline.
+          li.page__list-item Typically, the greatest load on the work on writing sites come in the spring or late winter and summer.
+
+        p.page__text Quality of work, honest, responsible and careful attitude to each client, reasonable prices and flexible system of discounts – this is what allows us to develop dynamically, to attract more new customers and conquer the hearts of regular customers.
+        p.page__text We hope that each reader will be able to read and understand the work that he orders. Yes, our work can influence the reader. Every professional writer can explain any difficult concept, but we should not be serious. Sometimes some rotten essay is a broad topic.
+        p.page__text This allows you to work for a few hours. Even taking into account the disclosure of the issue, the arguments, and a little literary language, which improves performance.
 
   .page__need-wrap
     include partials/block-need
