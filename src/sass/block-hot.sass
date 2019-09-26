@@ -4,18 +4,20 @@
   padding-bottom: 0
 
   @media #{$media-sm-plus-up}
-    padding-right: 11.8vw
+    padding-right: 6.8vw
 
   @media #{$media-md-up}
     padding-bottom: 15rem
 
   &__picture-cover
-    height: 54vh
+    height: 36vh
     object-position: top
+
+    @media #{$media-xs-up}
+      height: 54vh
 
     @media #{$media-md-up}
       height: auto
-
 
   &__content
     display: flex
@@ -28,6 +30,7 @@
     padding-right: 3rem
 
     @media #{$media-sm-plus-up}
+      padding-right: 8rem
 
   &__btn-more
     margin-left: 2.1rem
@@ -39,6 +42,8 @@
 
     @media #{$media-sm-plus-up}
       font-size: 6rem
+      line-height: 1em
+      margin-bottom: 3.5rem
 
   &__more
     &-wrap
@@ -63,10 +68,10 @@
         position: absolute
         bottom: -10rem
         right: 0
-        width: 50vw
+        width: 48vw
 
       @media #{$media-md-plus-up}
-        padding: 4rem 15vw 4rem 17rem
+        padding: 4rem 5vw 4.5rem 16.6rem
 
     &-need-title
       font-size: 3rem
@@ -74,7 +79,9 @@
       margin-bottom: 2rem
 
       @media #{$media-md-plus-up}
-        font-size: 4rem
+        font-size: 5rem
+        line-height: 1em
+        margin-bottom: 3rem
 
     &-btn-wrap
       margin: 9rem 5rem 5rem auto
@@ -136,21 +143,22 @@
 
   &__col
     &:nth-child(2)
-      padding: 5.2rem 0 0 13.5vw
+      padding: 5.1rem 0 0 14.3vw
       flex-basis: 100%
 
       @media #{$media-md-up}
         flex-basis: 60%
-        padding-top: 10rem
+        padding-top: 9.9rem
+        padding-left: 8rem
 
     &:nth-child(1)
       flex-basis: 100%
-      padding-left: $padding
-      padding-right: $padding
+      padding-right: 0
 
       @media #{$media-md-up}
         padding-left: 0
         flex-basis: 50%
 
       @media #{$media-md-plus-up}
+        padding-right: 4.4vw
         flex-basis: 40%

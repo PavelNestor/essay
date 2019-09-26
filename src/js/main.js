@@ -93,7 +93,6 @@ $(document).ready(function() {
   feddbackSlider.owlCarousel({
     stagePadding: 30,
     loop: true,
-    margin: 10,
     responsive: {
       0: {
         items: 1
@@ -122,8 +121,6 @@ $(document).ready(function() {
 
 // faq
 const toogleFaqs = item => {
-  console.log('item', item);
-  
   item.classList.toggle("active");
   
   const faqContent = item.nextElementSibling;

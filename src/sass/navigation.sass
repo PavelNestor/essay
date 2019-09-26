@@ -7,7 +7,7 @@
   width: 100%
 
   @media #{$media-md-up}
-    padding: .5rem 7vw 0 7vw
+    padding: 0 7vw
 
   &__burger
     display: block
@@ -28,6 +28,9 @@
     display: flex
     justify-content: space-evenly
     flex-grow: 2
+    display: flex
+    justify-content: center
+    padding-right: 1.4rem
 
   &__btn-wrapp
     display: flex
@@ -41,7 +44,11 @@
 
   &__item
     display: inline-block
-    margin: 0 .5rem
+    margin: 0
+    margin-right: 3.1rem
+
+    &:nth-last-child
+      margin-right: 0
     
     a
       font-family: $font-family-accent

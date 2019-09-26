@@ -4,11 +4,11 @@
   overflow-x: hidden
 
   @media #{$media-sm-up}
-    padding: 20rem 10rem 10rem
+    padding: 26.4rem 10rem 10rem
 
   &__content
     background: $color_white
-    padding: 5rem 3rem
+    padding: 5.9rem 3rem 0
     position: relative
 
     @media #{$media-sm-up}
@@ -16,12 +16,13 @@
 
   &__title
     font-size: 3.5rem
+    line-height: 1.1em
+    margin-bottom: 4.2rem
 
-  @media #{$media-sm-up}
-    font-size: 6rem
+    @media #{$media-sm-up}
+      font-size: 6rem
 
   &__slide
-    padding-top: 5rem
 
   &__carousel
     // position: relative
@@ -31,9 +32,18 @@
     top: 50%
     z-index: 10
     cursor: pointer
+    width: 4rem
+    height: 4rem
+    padding: 1.2rem
 
     &_prev
-      left: -1.5rem
+      left: -2rem
+
+      @media #{$media-sm-up}
+        left: -1.5rem
 
     &_next
-      right: -1.5rem
+      right: -2rem
+
+      @media #{$media-sm-up}
+        right: -1.5rem
