@@ -1,0 +1,36 @@
+extends partials/layout
+
+block vars
+  - var title = "About us"
+
+block content
+  include partials/menu-mobile
+  include partials/navigation
+  .page
+    .page__decor-block
+
+    .page__header
+      img.page__header-arrow(src="/img/icons/big-arrow.svg", alt="")
+      .page__name About us
+
+      .page__social-wrap
+        .page__social.page__social-fb
+          .round-btn.page__btn-fb
+            img(src="/img/icons/fb.svg", alt="")
+          | 25
+        .page__social.page__social-twitter
+          .round-btn.page__btn-twitter
+            img(src="/img/icons/twitter.svg", alt="")
+          | 54
+        .page__social.page__social-telegram
+          .round-btn.page__btn-telegram
+            img(src="/img/icons/telegram.svg", alt="")
+          | 36
+
+    .page__title
+    .page__content
+      .page__col
+      .page__col
+
+  .page__need-wrap
+    include partials/block-need

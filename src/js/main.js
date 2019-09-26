@@ -117,6 +117,10 @@ $(document).ready(function() {
     feddbackSlider.trigger('prev.owl.carousel');
   });
 
+  // Menu toggle
+  burgerOpen.addEventListener('click', openMenu);
+  burgerClose.addEventListener('click', closeMenu);
+
 });
 
 // faq
@@ -188,4 +192,21 @@ form.addEventListener(
   },
   false
 );
+
+
+// menu-togler
+const burgerOpen = _$('#burger');
+const burgerClose = _$('#burger-close');
+const menuMobile = _$('#menu-mobile');
+const menuMobileLinks = _$$('.menu-mobile__link');
+
+const openMenu = () => {
+  menuMobile.classList.add('menu-mobile_visible');
+};
+
+const closeMenu = () => {
+  menuMobile.classList.remove('menu-mobile_visible');
+};
+
+menuMobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
