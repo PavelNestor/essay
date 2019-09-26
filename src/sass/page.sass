@@ -15,6 +15,13 @@
     flex-wrap: wrap
 
     &-arrow
+      height: 4rem
+
+      @media #{$media-sm-plus-up}
+        height: auto
+
+  &__essay-detail
+    margin-left: 4.4rem
 
   &__name
     font-weight: 900
@@ -95,7 +102,10 @@
       background: $color_accent
       height: 7rem
       bottom: -3.5rem
-      right: 3vw
+      right: 5vw
+
+      @media #{$media-sm-plus-up}
+        right: 3vw
 
   &__image
     position: relative
@@ -156,3 +166,113 @@
 
     @media #{$media-sm-plus-up}
       padding-left: 0
+
+// Essay page
+.essay-page
+  position: relative
+  margin-bottom: 5rem
+
+  &__dots
+    display: inline
+    color: $color_accent
+    font-size: 1.6rem
+    position: absolute
+    bottom: -3.2rem
+    left: 0
+    cursor: pointer
+    
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 18%)
+    pointer-events: none
+
+    &.hidden
+      display: none
+
+  &__more
+    display: none
+
+    &.active
+      display: inline
+
+      .essay-page:after //TODO remove transparent
+        background: transparent
+
+.related
+  background: $color_bg-grey-two
+  padding: 5rem 0 6rem 7vw
+
+  @media #{$media-sm-plus-up}
+    padding: 5rem 12.2rem 6rem
+
+  &__subtitle
+    font-size: 2rem
+
+  &__title
+    font-size: 4rem
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      width: 2px
+      transform: rotate(-21deg)
+      background: $color_accent
+      height: 5rem
+      bottom: 6rem
+      left: 2rem
+
+  &__col
+    background: $color_white
+    padding: 3rem 2rem
+    flex-basis: 49%
+
+    @media #{$media-sm-plus-up}
+      padding: 3rem 5rem
+
+    &:nth-child(1)
+      margin-right: 0
+      margin-bottom: 2rem
+
+      @media #{$media-sm-plus-up}
+        margin-bottom: 0
+        margin-right: 2rem
+
+  &__content
+    display: flex
+    flex-direction: column
+
+    @media #{$media-sm-plus-up}
+      flex-direction: row
+
+.popular
+  padding: 5rem 2vw 5rem 14vw
+
+  @media #{$media-sm-plus-up}
+    padding: 5rem 12.2rem
+
+  &__col
+    flex-basis: 100%
+
+    @media #{$media-sm-up}
+      flex-basis: 50%
+
+    @media #{$media-md-up}
+      flex-basis: 33%
+
+    &:nth-child(3)
+      display: none
+
+      @media #{$media-sm-up}
+        display: block
+
+    &:nth-child(2)
+      display: none
+
+      @media #{$media-sm-plus-up}
+        display: block

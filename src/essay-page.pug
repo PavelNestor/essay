@@ -1,0 +1,140 @@
+extends partials/layout
+include partials/mixins
+
+block vars
+  - 
+    var title = "About us"
+
+    var topicsOne = [
+      {
+        topics: 'Argumentative essay',
+      },
+      {
+        topics: 'Argument Essay Topics',
+      },
+      {
+        topics: 'Cause and Effect essay',
+      },
+      {
+        topics: 'Common App Essay',
+      },
+      {
+        topics: 'Compare and Contrast',
+      },
+    ];
+
+    var topicsTwo = [
+      {
+        topics: 'Argumentative essay',
+      },
+      {
+        topics: 'Argument Essay Topics',
+      },
+      {
+        topics: 'Cause and Effect essay',
+      },
+      {
+        topics: 'Common App Essay',
+      },
+      {
+        topics: 'Compare and Contrast',
+      },
+    ];
+
+    var topicsThree = [
+      {
+        topics: 'Argumentative essay',
+      },
+      {
+        topics: 'Argument Essay Topics',
+      },
+      {
+        topics: 'Cause and Effect essay',
+      },
+      {
+        topics: 'Common App Essay',
+      },
+      {
+        topics: 'Compare and Contrast',
+      },
+    ];
+
+block content
+  include partials/menu-mobile
+  include partials/navigation
+  .page
+    .page__decor-block
+
+    .page__header
+      img.page__header-arrow(src="/img/icons/big-arrow.svg", alt="")
+      .page__name Essay
+
+      .page__social-wrap
+        .page__social.page__social-fb
+          .round-btn.page__btn.page__btn-fb
+            img(src="/img/icons/fb.svg", alt="")
+          | 25
+        .page__social.page__social-twitter
+          .round-btn.page__btn.page__btn-twitter
+            img(src="/img/icons/twitter.svg", alt="")
+          | 54
+        .page__social.page__social-telegram
+          .round-btn.page__btn.page__btn-telegram
+            img(src="/img/icons/telegram.svg", alt="")
+          | 36
+
+    h1.page__title
+      +title('Romeo and Juliet')
+      +essayDetails('826 Words', 'Sep 17, 2018', '4 Pages')
+
+    .page__content
+      .page__col
+        .page__image-wrap
+          +picturePng('/img/page/essay', alt='Essay picture')(class='op-top')
+
+      .page__col
+        p.page__text.page__text_first.essay-page Romeo and Juliet was Shakespeare’s most famous play which is about love of two teenagers of two rival families. Since Romeo’s family and Juliet’s family are rivals, their families don’t agree with the marriage of their children to each other. However, Romeo and Juliet despite the opposition of their families secretly get married at church and insist on reaching their goal of being together. The whole story is played in the theatre style of the Renaissance; audiences could see violence, young boys are playing female rolls without wearing masks, many scenes and time change. However, if it was played in Greek theatre style, the audience could see a different style of performance and there would be a different effect. In Greek Theatre we would 
+          span.essay-page__dots.page__text show more …
+          span.essay-page__more.page__text Romeo and Juliet was Shakespeare’s most famous play which is about love of two teenagers of two rival families. Since Romeo’s family and Juliet’s family are rivals, their families don’t agree with the marriage of their children to each other. However, Romeo and Juliet despite the opposition of their families secretly get married at church and insist on reaching their goal of being together. The whole story is played in the theatre style of the Renaissance; audiences could see violence, young boys are playing female rolls without wearing masks, many scenes and time change. However, if it was played in Greek theatre style, the audience could see a different style of performance and there would be a different effect. In Greek Theatre we would 
+        
+        p.page__text.page__text_first.essay-page These shifts from sunlight to sunset and again to sunlight are shown as time change in Renaissance theatre. If Romeo and Juliet were played at Greek theatre style then we wouldn’t have time changes and it would play continuously; the time change during performance would be announced to audience instead of changing scenes with purpose of showing time change. In conclusion, Romeo and Juliet is the most common love story written by Shakespeare. It was played in Renaissance Theatre and we can see a lot of violent actions, we can see young boys were playing female act without masks, many scenes, and time changes throughout the play. However, the Renaissance is very different theatre style from Greek Theatre. If the Romeo and Juliet were played in Greek theater, then we would have no violent actions and the narrator would tell the story about the fight instead of showing violent actions. Also, in Greek Theatre we would have men characters to play women parts by pretending that they are women and covering their faces through masks. At Greek Theatre we wouldn’t have time change, instead it would play continuously and the setting would be shown in one
+          span.essay-page__dots.page__text show more …
+          span.essay-page__more.page__text Romeo and Juliet was Shakespeare’s most famous play which is about love of two teenagers of two rival families. Since Romeo’s family and Juliet’s family are rivals, their families don’t agree with the marriage of their children to each other. However, Romeo and Juliet despite the opposition of their families secretly get married at church and insist on reaching their goal of being together. The whole story is played in the theatre style of the Renaissance; audiences could see violence, young boys are playing female rolls without wearing masks, many scenes and time change. However, if it was played in Greek theatre style, the audience could see a different style of performance and there would be a different effect. In Greek Theatre we would 
+
+    .related
+      h4.related__title Related
+      .related__content
+        .related__col
+          +essay('The best students essay writing service from east to west!',
+            '826 Words',
+            'Sep 17, 2018',
+            '4 Pages',
+            'Writing your successful essay! We make your writing dreams come true, bright and sound with our help 24/7! Get your order in few steps and succeed in a day! Our company helps you to edit, write and to add trustworthy references to your work! ...'
+            )(class='related__subtitle')
+
+        .related__col
+          +essay('The best students essay writing service from east to west!',
+            '826 Words',
+            'Sep 17, 2018',
+            '4 Pages',
+            'Writing your successful essay! We make your writing dreams come true, bright and sound with our help 24/7! Get your order in few steps and succeed in a day! Our company helps you to edit, write and to add trustworthy references to your work! ...'
+            )(class='related__subtitle')
+
+    .popular
+      h4.popular__title Popular Essays
+
+      .hot__topics-wrap
+        .hot__topics-col.popular__col
+          each topic in topicsOne
+            +topicsItem(topic)
+
+        .hot__topics-col.popular__col
+          each topic in topicsTwo
+            +topicsItem(topic)
+
+        .hot__topics-col.popular__col
+          each topic in topicsThree
+            +topicsItem(topic)
+
+  .page__need-wrap
+    include partials/block-need
