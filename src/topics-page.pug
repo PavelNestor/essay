@@ -1,0 +1,130 @@
+extends partials/layout
+include partials/mixins
+
+block vars
+  - 
+    var title = "About us"
+
+    var topicsOne = [
+      {
+        topics: 'Argumentative essay',
+      },
+      {
+        topics: 'Argument Essay Topics',
+      },
+      {
+        topics: 'Cause and Effect essay',
+      },
+      {
+        topics: 'Common App Essay',
+      },
+      {
+        topics: 'Compare and Contrast',
+      },
+    ];
+
+    var topicsTwo = [
+      {
+        topics: 'Argumentative essay',
+      },
+      {
+        topics: 'Argument Essay Topics',
+      },
+      {
+        topics: 'Cause and Effect essay',
+      },
+      {
+        topics: 'Common App Essay',
+      },
+      {
+        topics: 'Compare and Contrast',
+      },
+    ];
+
+    var topicsThree = [
+      {
+        topics: 'Argumentative essay',
+      },
+      {
+        topics: 'Argument Essay Topics',
+      },
+      {
+        topics: 'Cause and Effect essay',
+      },
+      {
+        topics: 'Common App Essay',
+      },
+      {
+        topics: 'Compare and Contrast',
+      },
+    ];
+
+    var tabLinks = [
+      '#',
+      'a',
+      'b',
+      cdefghijklmnopqrstuvwxyz'
+    ]
+
+block content
+  include partials/menu-mobile
+  include partials/navigation
+  .page
+    .page__decor-block
+
+    .page__header
+      img.page__header-arrow(src="/img/icons/big-arrow.svg", alt="")
+      .page__name Topics
+
+      .page__social-wrap
+        .page__social.page__social-fb
+          .round-btn.page__btn.page__btn-fb
+            img(src="/img/icons/fb.svg", alt="")
+          | 25
+        .page__social.page__social-twitter
+          .round-btn.page__btn.page__btn-twitter
+            img(src="/img/icons/twitter.svg", alt="")
+          | 54
+        .page__social.page__social-telegram
+          .round-btn.page__btn.page__btn-telegram
+            img(src="/img/icons/telegram.svg", alt="")
+          | 36
+
+    h1.page__title
+      +title('Hot Topics we can help with')
+
+    .page__content.page__content_right
+      .page__col.page__col_right
+        h5.page__col_right-title
+          +title('Get more than you expect')
+
+        p.page__text Presenting the list of your possible orders, here you can look through catalog oo writing essays and other types of academic papers - these are the most popular works among our clients. 
+
+      .page__col.page__col_right
+        .page__image-wrap
+          +picturePng('/img/page/topics', alt='Essay picture')(class='op-top')
+
+    .tab__wrap
+      ul.tab
+        li.tab__links a
+        li.tab__links b
+        li.tab__links c
+        li.tab__links d
+      
+
+    .popular
+      .hot__topics-wrap
+        .hot__topics-col.popular__col
+          each topic in topicsOne
+            +topicsItem(topic)
+
+        .hot__topics-col.popular__col
+          each topic in topicsTwo
+            +topicsItem(topic)
+
+        .hot__topics-col.popular__col
+          each topic in topicsThree
+            +topicsItem(topic)
+
+  .page__need-wrap
+    include partials/block-need
