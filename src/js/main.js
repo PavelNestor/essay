@@ -2,8 +2,8 @@
 
 const _$ = document.querySelector.bind(document);
 const _$$ = document.querySelectorAll.bind(document);
-const faqs = _$$('.faq-item');
 
+const faqs = _$$('.faq-item');
 
 document.addEventListener('DOMContentLoaded', createSelect, false);
 
@@ -223,4 +223,23 @@ menuMobileLinks.forEach(link => link.addEventListener('click', closeMenu));
     essayDot.classList.toggle('hidden');
     essayMore.classList.toggle('active');
   }
-})()
+})();
+
+// Topics TAB
+(function() {
+  const tabcontents = _$$('.tab__content');
+  const tablinks = _$$('.tab__links');
+
+  const tabToggler = index => {
+    tabcontents.forEach(tabContent => tabContent.style.display = "none");
+    tablinks.forEach(tabLink => tabLink.classList.remove('active'));
+
+    tabcontents[index].style.display = "flex";
+    tablinks[index].classList.add('active');
+  };
+
+  tablinks.forEach((tabLink, index) => tabLink.addEventListener('click', () => tabToggler(index)));
+
+  tablinks[0].click();
+
+})();

@@ -72,7 +72,7 @@ mixin slideItem(options)
       p.slide__text= options.text
 
 mixin topicsItem(options)
-  .hot__topics-item 
+  .hot__topics-item(class!=attributes.class)
     .hot__topics-text= options.topics
     img.hot__topics-arrow(src='/img/icons/right-arrow.svg', alt='')
 
