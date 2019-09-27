@@ -85,6 +85,13 @@
     @media #{$media-sm-plus-up}
       flex-direction: row
 
+    &_right
+      padding-left: 10vw
+      padding-bottom: 0
+
+      @media #{$media-sm-plus-up}
+        padding-left: 16.6rem
+
   &__image-wrap
     position: relative
     height: 50vh
@@ -106,6 +113,9 @@
 
       @media #{$media-sm-plus-up}
         right: 3vw
+
+    &_right
+      height: 100%
 
   &__image
     position: relative
@@ -158,6 +168,28 @@
       @media #{$media-sm-plus-up}
         padding-left: 0
         padding-top: 0
+
+    &_right
+      &:nth-child(1)
+        flex-basis: 33%
+        background: $color_bg-grey-two
+        padding: 2rem
+
+        @media #{$media-sm-plus-up}
+          padding: 7.5rem 5rem 10rem
+
+      &:nth-child(2)
+        flex-basis: 66%
+        padding: 0
+
+        @media #{$media-sm-plus-up}
+          padding-top: 4rem
+
+      &-title
+        font-size: 3rem
+        line-height: 1em
+        margin-bottom: 3rem
+        padding-right: 6rem
 
   &__need-wrap
     padding-left: 7vw
@@ -276,3 +308,49 @@
 
       @media #{$media-sm-plus-up}
         display: block
+
+.tab
+  display: flex
+  margin-top: 5rem
+  flex-wrap: wrap
+
+  &__wrap
+    padding-left: 10vw
+
+    @media #{$media-md-plus-up}
+      padding-left: 16.6rem
+
+  &__content
+    padding-left: 10vw
+    display: flex
+    flex-wrap: wrap
+    padding-bottom: 10rem
+    padding-right: 2rem
+    flex-wrap: wrap
+
+    @media #{$media-md-plus-up}
+      padding-right: 28rem
+      padding-left: 16.6rem
+
+    &-item
+      width: 80vw
+
+      @media #{$media-sm-up}
+        width: 40vw
+
+      @media #{$media-md-plus-up}
+        width: 30vw
+
+  &__links
+    font-size: 1.6rem
+    line-height: 1.8em
+    color: $color_accent
+    margin-right: 1.6rem
+    text-transform: uppercase
+    cursor: pointer
+    padding: 0 .5rem
+
+    &.active
+      background: $color_primary
+      color: $color_white
+
