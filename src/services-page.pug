@@ -1,0 +1,113 @@
+extends partials/layout
+include partials/mixins
+
+block vars
+  -
+    var title = "Our services"
+
+block content
+  include partials/menu-mobile
+  include partials/navigation
+  .page
+    .page__decor-block
+
+    .page__header
+      img.page__header-arrow(src="/img/icons/big-arrow.svg", alt="")
+      .page__name Our services
+
+      .page__social-wrap
+        .page__social.page__social-fb
+          .round-btn.page__btn.page__btn-fb
+            img(src="/img/icons/fb.svg", alt="")
+          | 25
+        .page__social.page__social-twitter
+          .round-btn.page__btn.page__btn-twitter
+            img(src="/img/icons/twitter.svg", alt="")
+          | 54
+        .page__social.page__social-telegram
+          .round-btn.page__btn.page__btn-telegram
+            img(src="/img/icons/telegram.svg", alt="")
+          | 36
+
+    h1.page__title
+      +title('Cheap Essay Writing Service to Relieve You from Worries')
+
+    .page__content.page__content_right
+      .page__col.page__col_right
+        .main__card-small.services__form
+          .card-small__title
+            h4.card-small__header
+              +title('Calculate your price')
+
+          form.form(action="#")
+            .form__group.form__group_main
+              .select-style
+                .select-style__text Type of paper:
+
+                +mainSelect('essay', [
+                  {value: "1", name: "1 Essay"},
+                  {value: "2", name: "2 Essay"},
+                  {value: "3", name: "3 Essay"},
+                  {value: "4", name: "4 Essay"},
+                ])
+
+            .form__group.form__group_main
+              .select-style
+                .select-style__text Academic level :
+
+                +mainSelect('academic-level', [
+                  {name: '1 Undergraduate', value: '1'}, 
+                  {name: '2 Undergraduate', value: '2'}, 
+                  {name: '3 Undergraduate', value: '3'}, 
+                  {name: '4 Undergraduate', value: '4'}, 
+                  {name: '5 Undergraduate', value: '5'}
+                ])
+
+            .form__group.form__group_main
+              .select-style
+                .select-style__text Deadline:
+
+                +mainSelect('deadline', [
+                  {name: '1 days', value: '1'}, 
+                  {name: '2 days', value: '2'}, 
+                  {name: '3 days', value: '3'}, 
+                  {name: '4 days', value: '4'}, 
+                  {name: '5 days', value: '5'}
+                ])
+
+            .form__group.form__group_main
+              .select-style
+                .select-style__text Pages:
+
+                +mainSelect('pages', [
+                  {name: '1 page', value: '1'}, 
+                  {name: '2 page', value: '2'}, 
+                  {name: '3 page', value: '3'}, 
+                  {name: '4 page', value: '4'}, 
+                  {name: '5 page', value: '5'}
+                ])
+
+            .form__group.form__group_main-last
+              .select-style__text Price: 
+                span.form__accent-text $6
+              button.main-btn.main-btn_transparent.ml-2.main__next-btn(action="#", type='submit') Next Step
+
+      .page__col.page__col_right
+        .page__image-wrap.page__image-wrap_right
+          +picturePng('/img/page/services', alt='Our services')(class='op-top')
+
+    .services__content
+      p.page__text It is impossible to graduate without experiencing academic writing difficulties on your way to the desired degree. The main source of students’ problems and frustration surely is homework. While you may be straight-A learner, who works like a beaver in class, there is no way you can be absolutely immune to homework projects that seem unachievable. A whole range of obstacles can arise on your way to success: short deadlines, boring topics, and unclear instructions are just a small subset of all troubles that may occur. Not to mention your personal and social life. Sometimes, your college days become so gloomy that you have no idea how to pull everything off and you say: “I wish someone else could write my essay!” When the deadlines are melting down and the number of tasks continues to grow, there is something to be done about that.
+      p.page__text We have a great idea to offer. EssaysWriting.org can become your personal writing helper and the best place to order essays online. We know how it feels to be left face to face with your tasks having nobody to support you. No need to panic – we provide solutions for all kinds of students’ issues and you are most welcome to benefit from them. Our professional writing team will eagerly accept your request and tailor a truly-amazing paper of the highest quality. Writing essays is our duty and passion. We back you up with numerous guarantees and provide a great deal of cool features that will make your ordering experience not just safe and convenient, but enjoyable! If you are willing to know more about our offers, continue reading and get ready to place your order!
+
+      h5.services__subtitle Professional Essay Writer As Your Dedicated Personal Assistant
+
+      p.page__text First and foremost, we would like to start with presenting our fantastical writing team. We know that each and every student dreams of having someone, who can undertake all of his/her assignments and make short work of them. Hiring a professional essay writer is like having a magical homework-elf, who tailors your papers while you are having rest. We bet that you would appreciate cooperation with someone like this:
+
+      ul.page__list.services__list
+          li.page__list-item Start with small orders. This will reduce the percentage of the lost amount of money if it turns out the resource is not present.
+          li.page__list-item Pre-ordered work. Before the start of training, you can even learn the curriculum, to not order essays at the last moment before the deadline.
+          li.page__list-item Typically, the greatest load on the work on writing sites come in the spring or late winter and summer.
+
+  .page__need-wrap
+    include partials/block-need

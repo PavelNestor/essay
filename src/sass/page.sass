@@ -12,10 +12,11 @@
     padding: 4.4rem 3.9rem 1.6rem
     display: flex
     justify-content: flex-start
+    align-items: center
     flex-wrap: wrap
 
     &-arrow
-      height: 4rem
+      height: 2rem
 
       @media #{$media-sm-plus-up}
         height: auto
@@ -86,10 +87,13 @@
       flex-direction: row
 
     &_right
-      padding-left: 10vw
+      padding-left: 0
       padding-bottom: 0
 
       @media #{$media-sm-plus-up}
+        padding-left: 7vw
+
+      @media #{$media-md-plus-up}
         padding-left: 16.6rem
 
   &__image-wrap
@@ -174,6 +178,7 @@
         flex-basis: 33%
         background: $color_bg-grey-two
         padding: 2rem
+        padding-left: 10vw
 
         @media #{$media-sm-plus-up}
           padding: 7.5rem 5rem 10rem
@@ -183,7 +188,6 @@
         padding: 0
 
         @media #{$media-sm-plus-up}
-          padding-top: 4rem
 
       &-title
         font-size: 3rem
@@ -354,3 +358,65 @@
       background: $color_primary
       color: $color_white
 
+.services
+  &__content 
+    padding: 5rem 7vw 10rem 10vw
+
+    @media #{$media-md-plus-up}
+      padding: 5rem 33vw 10rem 16.6rem
+
+  &__form
+    position: relative
+    right: 0
+    top: 0
+    padding: 0
+
+    .card-small__header::before
+      top: -10rem
+      bottom: 0
+      left: 1.2rem
+      width: 2px
+      margin-bottom: 0
+      height: 6rem
+
+  &__list
+    margin-top: 3rem
+
+  &__subtitle
+    font-size: 2rem
+    margin: 3rem 0
+
+    @media #{$media-md-plus-up}
+      font-size: 4rem
+
+.checker
+  &__content
+    padding-bottom: 25.6rem
+    padding-right: 2rem
+
+    @media #{$media-md-plus-up}
+      padding-right: 15rem
+
+  &__video-wrap
+    position: absolute
+    top: -20rem
+    left: 7vw
+    right: 2rem
+
+    @media #{$media-md-plus-up}
+      left: 20vw
+      right: 20vw
+
+  &__faq
+    background: $color_bg-grey-two
+    padding: 35rem 2rem 9rem 7vw
+    position: relative
+
+    @media #{$media-xxs-up}
+      padding: 25rem 2rem 9rem 7vw
+
+    @media #{$media-sm-up}
+      padding: 20rem 2rem 9rem 7vw
+
+    @media #{$media-md-plus-up}
+      padding: 30rem 15rem 9rem 16.6rem
