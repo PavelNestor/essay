@@ -66,8 +66,14 @@ block content
         p.page__text Upload your content for free and observe the result in a few seconds!
 
       .page__col.page__col_right
-        .page__image-wrap.page__image-wrap_right
-          +picturePng('/img/page/services', alt='Our services')(class='op-top')
+        form.checker__form(action='#')
+          input.checker__form-input(type="text", placeholder='Place Your Title Here')
+          textarea.checker__form-input.checker__form-input_textarea(type="text", placeholder='Paste Your Text Here')
+
+          .upload.checker__form-input.checker__form-input_upload
+
+          button.round-btn.checker__form-btn(type='submit') Check My Essay
+            //- img.round-btn.checker__form-btn-img(src="/img/icons/btn-arrow.svg", alt="")
 
     .services__content.checker__content
       h5.services__subtitle Plagiarism checker online & free for students

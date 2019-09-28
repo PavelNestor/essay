@@ -230,6 +230,10 @@ menuMobileLinks.forEach(link => link.addEventListener('click', closeMenu));
   const tabcontents = _$$('.tab__content');
   const tablinks = _$$('.tab__links');
 
+  if (tabcontents.length < 1 || tablinks.length < 1) {
+    return;
+  };
+
   const tabToggler = index => {
     tabcontents.forEach(tabContent => tabContent.style.display = "none");
     tablinks.forEach(tabLink => tabLink.classList.remove('active'));
@@ -243,3 +247,11 @@ menuMobileLinks.forEach(link => link.addEventListener('click', closeMenu));
   tablinks[0].click();
 
 })();
+
+// Upload
+
+$(".upload").upload({
+  action: '#', // TODO change to real handler
+  label: 'Drop Your File Here or Click to Upload',
+  autoUpload: true
+});
