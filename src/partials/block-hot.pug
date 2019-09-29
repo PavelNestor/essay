@@ -108,11 +108,13 @@ section.container.hot
       .hot__topics-wrap
         .hot__topics-col
           each topic in topicsOne
-            +topicsItem(topic)
+            a(href='essay-page.html')
+              +topicsItem(topic)
 
         .hot__topics-col
           each topic in topicsTwo
-            +topicsItem(topic)
+            a(href='essay-page.html')
+              +topicsItem(topic)
 
       .hot__more-btn-wrap.hot__more-btn-wrap_mobile
         .round-btn.round-btn_more.hot__btn-more

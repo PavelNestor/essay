@@ -210,18 +210,22 @@ const closeMenu = () => {
 
 menuMobileLinks.forEach(link => link.addEventListener('click', closeMenu));
 
+// Show More
 (function () {
   const essayDots = _$$('.essay-page__dots');
   const essayMoreText = _$$('.essay-page__more');
+  const essayMoreBlocks = _$$('.essay-page');
 
   essayDots.forEach((dot, index) => dot.addEventListener('click', () => showMore(index)))
 
   const showMore = (index) => {
     const essayDot = essayDots[index];
     const essayMore = essayMoreText[index];
+    const essayMoreBlock = essayMoreBlocks[index];
 
     essayDot.classList.toggle('hidden');
     essayMore.classList.toggle('active');
+    essayMoreBlock.classList.toggle('active');
   }
 })();
 

@@ -126,15 +126,18 @@ block content
       .hot__topics-wrap
         .hot__topics-col.popular__col
           each topic in topicsOne
-            +topicsItem(topic)
+            a(href='essay-page.html')
+              +topicsItem(topic)
 
         .hot__topics-col.popular__col
           each topic in topicsTwo
-            +topicsItem(topic)
+            a(href='essay-page.html')
+              +topicsItem(topic)
 
         .hot__topics-col.popular__col
           each topic in topicsThree
-            +topicsItem(topic)
+            a(href='essay-page.html')
+              +topicsItem(topic)
 
   .page__need-wrap
     include partials/block-need

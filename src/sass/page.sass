@@ -72,6 +72,7 @@
 
   &__btn-telegram
     background: #41B4E6
+    padding: 1.2rem 1.2rem 1.2rem 1rem
 
   &__subtitle
     font-size: 3rem
@@ -233,6 +234,10 @@
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 18%)
     pointer-events: none
 
+  &.active
+    &::after
+      background: none
+
     &.hidden
       display: none
 
@@ -241,9 +246,6 @@
 
     &.active
       display: inline
-
-      .essay-page:after //TODO remove transparent
-        background: transparent
 
 .related
   background: $color_bg-grey-two
@@ -296,7 +298,7 @@
   padding: 5rem 2vw 5rem 14vw
 
   @media #{$media-sm-plus-up}
-    padding: 5rem 12.2rem
+    padding: 5rem 10vw
 
   &__col
     flex-basis: 100%
