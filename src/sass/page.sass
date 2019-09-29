@@ -15,6 +15,9 @@
     align-items: center
     flex-wrap: wrap
 
+    @media #{$media-sm-plus-up}
+      padding: 4.2rem 9.5rem 1rem 3.5vw
+
     &-arrow
       height: 2rem
 
@@ -31,6 +34,9 @@
     font-family: $font-family-accent
     color: $color_black
     margin-left: 4.4rem
+
+    @media #{$media-sm-plus-up}
+      margin-left: calc(7.5vw - 8.5rem)
 
   &__social-wrap
     display: flex
@@ -75,8 +81,8 @@
     margin-bottom: 4rem
 
     @media #{$media-sm-plus-up}
-      margin-left: 16.6rem
-      margin-bottom: 8rem
+      margin: .4rem 20rem 8rem 11vw
+      font-size: 6rem
 
   &__content
     display: flex
@@ -94,7 +100,7 @@
         padding-left: 7vw
 
       @media #{$media-md-plus-up}
-        padding-left: 16.6rem
+        padding-left: 11vw
 
   &__image-wrap
     position: relative
@@ -130,7 +136,7 @@
     color: $color_page-text
 
     @media #{$media-sm-plus-up}
-      font-size: 1.6rem
+      // font-size: 1.6rem
 
     &_first
       margin-top: 0
@@ -181,7 +187,7 @@
         padding-left: 10vw
 
         @media #{$media-sm-plus-up}
-          padding: 7.5rem 5rem 10rem
+          padding: 7.8rem 4.7rem 10rem
 
       &:nth-child(2)
         flex-basis: 66%
@@ -322,7 +328,7 @@
     padding-left: 10vw
 
     @media #{$media-md-plus-up}
-      padding-left: 16.6rem
+      padding-left: 11vw
 
   &__content
     padding-left: 10vw
@@ -334,7 +340,7 @@
 
     @media #{$media-md-plus-up}
       padding-right: 28rem
-      padding-left: 16.6rem
+      padding-left: 11vw
 
     &-item
       width: 80vw
@@ -363,7 +369,7 @@
     padding: 5rem 7vw 10rem 10vw
 
     @media #{$media-md-plus-up}
-      padding: 5rem 33vw 10rem 16.6rem
+      padding: 4.8rem 33vw 8.6rem 11vw
 
   &__form
     position: relative
@@ -388,6 +394,7 @@
 
     @media #{$media-md-plus-up}
       font-size: 4rem
+      line-height: 1.15em
 
 .checker
   &__form
@@ -396,11 +403,12 @@
     padding: 5rem 2rem 5rem 10vw
 
     @media #{$media-sm-plus-up}
-      padding: 5rem 14rem
+      padding: 5.3rem 9.7rem 4.4rem 15rem
 
     &-btn
       width: fit-content
-      padding: 1rem 7rem 1rem 2rem
+      padding: 1.2rem 7rem 1.2rem 3rem
+      font-size: 1.4rem
       text-align: center
       display: flex
       justify-content: center
@@ -409,7 +417,20 @@
       position: relative
       border: none
       box-shadow: none
-      background: url('/img/icons/btn-arrow.svg') no-repeat calc(100% - 1rem), $color_accent
+      float: left
+      background: url('/img/icons/btn-arrow.svg') no-repeat calc(100% - 1.4rem), $color_accent
+
+    &-wrap
+      margin-bottom: 5rem
+
+      &-text
+        float: right
+        font-size: 1.22rem
+        margin-top: 1rem
+
+        &_red
+          color: $color_accent
+
 
     &-input
       width: 100%
@@ -420,34 +441,37 @@
       border-radius: 5px
       text-align: center
       margin-bottom: 2rem
-      padding: 1rem
+      padding: .6rem
 
       &_upload
         background: $color_white
         border-radius: 20px
         border: 1px dashed $color_page-text
         height: 9rem
+        margin-bottom: 1.5rem
 
       &_textarea
         resize: none
         height: 12rem
+        margin-bottom: 1.7rem
 
   &__content
     padding-bottom: 25.6rem
     padding-right: 2rem
 
     @media #{$media-md-plus-up}
-      padding-right: 15rem
+      padding-bottom: 24.4rem
+      padding-right: 32vw
 
   &__video-wrap
     position: absolute
-    top: -20rem
+    top: -21rem
     left: 7vw
     right: 2rem
 
     @media #{$media-md-plus-up}
-      left: 20vw
-      right: 20vw
+      left: 20.5vw
+      right: 19.3vw
 
   &__faq
     background: $color_bg-grey-two
@@ -461,16 +485,22 @@
       padding: 20rem 2rem 9rem 7vw
 
     @media #{$media-md-plus-up}
-      padding: 30rem 15rem 9rem 16.6rem
+      padding: 28.2rem 7.4vw 9rem 11vw
+
+    &-item
+      padding: 1.3rem 3.8rem
 
 .fs-upload-target
   font-weight: bold
   color: $color_primary
+  padding-top: 0.6rem
+  z-index: -1
 
   &:before
     content: 'Or upload your file: .pdf, .docx, .txt.'
     display: block
     font-weight: normal
+    margin-bottom: -2px
 
 .fs-upload
   position: relative
