@@ -270,6 +270,9 @@ input[type='number']
     height: 4rem
     padding: 1.2rem 1.1rem
 
+  &:hover
+    background: $color_btn-hover
+
   &_more
     width: 4rem
     height: 4rem
@@ -286,6 +289,11 @@ input[type='number']
   min-width: 10rem
   padding: 1rem
   text-align: center
+  transition: background .6s
+
+  &:hover
+    background: $color_btn-hover
+    color: $color_white
 
   &_black
     background: $color_primary
@@ -294,6 +302,7 @@ input[type='number']
     background: transparent
     color: $color_primary
     border: 1px solid $color_primary
+
 
 //helpers
 .ml-2

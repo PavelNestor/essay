@@ -7,6 +7,7 @@
   width: 100%
   position: absolut
   height: 12rem
+  transition: .4s linear
 
   @media #{$media-md-up}
     padding: .9rem 7vw
@@ -14,15 +15,17 @@
 
   &_active
     position: fixed
-    top: 0
+    top: -12rem
     left: 0
     right: 0
     height: 12rem
     z-index: 10
-    transition: .4s
+    transition: transform .4s linear
     background: $color_white
+    transform: translateY(100%)
 
     @media #{$media-md-up}
+      top: -6rem
       height: 6rem
 
   &__burger-wrap
@@ -97,7 +100,8 @@
       padding: .8rem
 
 .search
-  margin: 0 
+  margin: 0
+  margin-right: 1.5rem
 
   @media #{$media-sm-plus-up}
     margin: 0 0 0 auto

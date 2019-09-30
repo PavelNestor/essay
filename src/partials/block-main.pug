@@ -6,38 +6,39 @@ section.container.container_right.main
 
   .main__content
 
-    .main__card-big
-      .card-big__title
-        h1 
-          +title('The best students essay writing service from east to west')
+    .main__card-wrap
+      .main__card-big
+        .card-big__title
+          h1 
+            +title('The best students essay writing service from east to west')
 
-      ul.list
-        li.list__item Writing your successful essay!
-        li.list__item We make your writing dreams come true, bright and sound with our help 24/7!
-        li.list__item Get your order in few steps and succeed in a day!
-        li.list__item Our company helps you to create first-rate academic writing prepared by our pro essay writers!
+        ul.list
+          li.list__item Writing your successful essay!
+          li.list__item We make your writing dreams come true, bright and sound with our help 24/7!
+          li.list__item Get your order in few steps and succeed in a day!
+          li.list__item Our company helps you to create first-rate academic writing prepared by our pro essay writers!
 
-      form.form.form_search(action='#')
-        .form__group.form__group_main
-          input.search-form__input(type='text', placeholder='Enter your topic, keywords, subject, assignment...')
-          img.search-form__icon(src="/img/icons/search.svg", alt="search")
+        form.form.form_search(action='#')
+          .form__group.form__group_main
+            input.search-form__input(type='text', placeholder='Enter your topic, keywords, subject, assignment...')
+            img.search-form__icon(src="/img/icons/search.svg", alt="search")
 
-    .main__card-small
-      .card-small__title
-        h4.card-small__header
-          +title('Calculate your price')
+      .main__card-small
+        .card-small__title
+          h4.card-small__header
+            +title('Calculate your price')
 
-      form.form(action="#")
-        .form__group.form__group_main
-          .select-style
-            .select-style__text Type of paper:
+        form.form(action="#")
+          .form__group.form__group_main
+            .select-style
+              .select-style__text Type of paper:
 
-            +mainSelect('essay', [
-              {value: "1", name: "1 Essay"},
-              {value: "2", name: "2 Essay"},
-              {value: "3", name: "3 Essay"},
-              {value: "4", name: "4 Essay"},
-            ])
+              +mainSelect('essay', [
+                {value: "1", name: "1 Essay"},
+                {value: "2", name: "2 Essay"},
+                {value: "3", name: "3 Essay"},
+                {value: "4", name: "4 Essay"},
+              ])
 
         .form__group.form__group_main
           .select-style
