@@ -288,6 +288,6 @@ roundBtns.forEach(btn => btn.addEventListener('mouseout', () => btn.classList.re
 
 // Need block animation
 new WOW({
-  offset: 300,
+  offset: 250,
   mobile: true, 
 }).init();
