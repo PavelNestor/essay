@@ -1,6 +1,12 @@
 .page
   position: relative
 
+  &__nav-wrap
+    height: 12rem
+
+    @media #{$media-md-up}
+      height: 6rem
+
   &__decor-block
     width: 7vw
     height: 100%
@@ -80,6 +86,11 @@
   &__subtitle
     font-size: 3rem
 
+    @media #{$media-sm-plus-up}
+      font-size: 4rem
+      margin-top: 3rem
+      margin-bottom: 3.4rem
+
   &__title
     margin-left: 10vw
     margin-bottom: 4rem
@@ -115,6 +126,9 @@
     @media #{$media-sm-plus-up}
       height: auto
 
+    @media #{$media-lg-up}
+      height: 70rem
+
     &::after
       content: ''
       position: absolute
@@ -131,6 +145,9 @@
     &_right
       height: 100%
 
+      @media #{$media-lg-up}
+        height: 45rem
+
   &__image
     position: relative
 
@@ -140,13 +157,17 @@
     color: $color_page-text
 
     @media #{$media-sm-plus-up}
-      // font-size: 1.6rem
+      font-size: 1.6rem
+      line-height: 1.9em
+      margin-top: .4rem
+      margin-bottom: 1rem
 
     &_first
       margin-top: 0
 
     &_bold
       font-weight: bold
+      margin: 3rem 0
 
   &__list
     margin: 0
@@ -178,6 +199,7 @@
     &:nth-child(2)
       padding-left: 14vw
       padding-top: 4rem
+      padding-right: 7vw
 
       @media #{$media-sm-plus-up}
         padding-left: 0
@@ -335,12 +357,19 @@
     @media #{$media-md-plus-up}
       padding-left: 11vw
 
+  &__topics-links
+    .hot__topics-text
+      font-size: 1.6rem
+
+      @media #{$media-md-plus-up}
+        font-size: 2rem
+
   &__content
-    padding-left: 10vw
+    padding-left: 14vw
     display: flex
     flex-wrap: wrap
     padding-bottom: 10rem
-    padding-right: 2rem
+    padding-right: 7vw
     flex-wrap: wrap
 
     @media #{$media-md-plus-up}
@@ -360,10 +389,11 @@
     font-size: 1.6rem
     line-height: 1.8em
     color: $color_accent
-    margin-right: 1.6rem
+    margin-right: 1rem
     text-transform: uppercase
     cursor: pointer
-    padding: 0 .5rem
+    padding: 0 .9rem
+    font-weight: bold
 
     &.active
       background: $color_primary
@@ -371,7 +401,7 @@
 
 .services
   &__content 
-    padding: 5rem 7vw 10rem 10vw
+    padding: 5rem 7vw 10rem 14vw
 
     @media #{$media-md-plus-up}
       padding: 4.8rem 33vw 8.6rem 11vw
@@ -462,7 +492,7 @@
 
   &__content
     padding-bottom: 25.6rem
-    padding-right: 2rem
+    padding-right: 7vw
 
     @media #{$media-md-plus-up}
       padding-bottom: 24.4rem

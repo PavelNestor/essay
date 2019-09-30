@@ -4,6 +4,7 @@
   padding: 3.2rem 2rem 3.7rem 4.2rem
   width: 100%
   z-index: 1
+  display: none
 
   @media #{$media-sm-plus-up}
     width: fit-content
@@ -17,6 +18,9 @@
 
   @media #{$media-md-plus-up}
     padding: 4rem 5vw 4.5rem 16.6rem
+
+  &__active
+    display: block
 
   &__title
     font-size: 3rem

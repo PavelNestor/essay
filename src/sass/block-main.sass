@@ -11,6 +11,7 @@
 
     @media #{$media-sm-plus-up}
       height: 10rem
+      align-items: center
 
   &__next-btn
     margin-right: .6rem
@@ -68,6 +69,12 @@
 
     @media #{$media-md-plus-up}
       padding: 5.9rem 7.1rem 5rem 7.7rem
+
+    @media #{$media-lg-up}
+      min-height: 50rem
+      display: flex
+      flex-direction: column
+      justify-content: center
 
     .card-big
       &__title

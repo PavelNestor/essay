@@ -259,3 +259,35 @@ $(".upload").upload({
   label: 'Drop Your File Here or Click to Upload',
   autoUpload: true
 });
+
+
+// Navbar show on scroll
+const navEl = _$('.navbar');
+let lastScrollPosition = 0;
+
+function showNavOnScroll() {
+  const scrollPosition = document.body.getBoundingClientRect().top;
+  const isScrollDirectionBackwards = lastScrollPosition < scrollPosition;
+
+  if (isScrollDirectionBackwards && scrollPosition < -10) {
+    navEl.classList.add('navbar_active');
+  } else {
+    navEl.classList.remove('navbar_active');
+  }
+
+  lastScrollPosition = scrollPosition;
+};
+
+window.addEventListener('scroll', showNavOnScroll);
+
+// Round button animation
+const roundBtns = _$$('.round-btn');
+
+roundBtns.forEach(btn => btn.addEventListener('mouseover', () => btn.classList.add('drill')));
+roundBtns.forEach(btn => btn.addEventListener('mouseout', () => btn.classList.remove('drill')));
+
+// Need block animation
+new WOW({
+  offset: 300,
+  mobile: true, 
+}).init();

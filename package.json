@@ -38,6 +38,7 @@
   },
   "homepage": "http://essay.nestor.studio",
   "dependencies": {
-    "font-awesome": "4.7.0"
+    "font-awesome": "4.7.0",
+    "wow.js": "^1.2.2"
   }
 }

@@ -5,66 +5,279 @@ block vars
   - 
     var title = "Topics"
 
-    var topicsA = [
-      {
-        topics: 'Argumentative essay',
-      },
-      {
-        topics: 'Argument Essay Topics',
-      },
-    ];
-
-    var topicsB = [
-      {
-        topics: 'B essay',
-      },
-    ];
-
-    var topicsC = [
-      {
-        topics: 'Cause and Effect essay',
-      },
-      {
-        topics: 'Common App Essay',
-      },
-      {
-        topics: 'Compare and Contrast',
-      },
-    ];
-
     var tabLinks = [
-      '#',
-      'a',
-      'b',
-      'c',
-      'd',
-      'e',
-      'f',
-      'g',
-      'h',
-      'i',
-      'j',
-      'k',
-      'l',
-      'm',
-      'n',
-      'o',
-      'p',
-      'q',
-      'r',
-      's',
-      't',
-      'u',
-      'v',
-      'w',
-      'x',
-      'y',
-      'z'
+      {
+        link: '#',
+        content: [
+          {
+            topics: 'Argumentative essay',
+          },
+          {
+            topics: 'Argument Essay Topics',
+          },
+          {
+            topics: 'Cause and Effect essay',
+          },
+          {
+            topics: 'Common App Essay',
+          },
+          {
+            topics: 'Compare and Contrast',
+          },
+          {
+            topics: 'Controversial Essay',
+          },
+          {
+            topics: 'Classification Essay',
+          },
+          {
+            topics: 'Definition Essay',
+          },
+          {
+            topics: 'Descriptive Essay',
+          },
+          {
+            topics: 'Deforestation Definition',
+          },
+          {
+            topics: 'Evaluation Essay',
+          },
+          {
+            topics: 'Exploratory Essay',
+          },
+          {
+            topics: 'Expository Essay',
+          },
+          {
+            topics: 'Exemplification Essay',
+          },
+          {
+            topics: 'Good Research Essay',
+          },
+          {
+            topics: 'Help me write my essay',
+          },
+          {
+            topics: 'Narrative Essay',
+          },
+          {
+            topics: 'Personal Essay',
+          },
+          {
+            topics: 'Persuasive Essay',
+          },
+          {
+            topics: 'Problem Solution Essay',
+          },
+          {
+            topics: 'Process Essay',
+          },
+          {
+            topics: 'Proposal Essay',
+          },
+          {
+            topics: 'Reflective Essay',
+          },
+          {
+            topics: 'Romeo & Juliet Essay',
+          },
+        ]
+      },
+      {
+        link: 'a',
+        content: [
+          {
+            topics: 'Argumentative essay',
+          },
+          {
+            topics: 'Argument Essay Topics',
+          },
+        ]
+      },
+      {
+        link: 'b',
+        content: []
+      },
+      {
+        link: 'c',
+        content: [
+          {
+            topics: 'Cause and Effect essay',
+          },
+          {
+            topics: 'Common App Essay',
+          },
+          {
+            topics: 'Compare and Contrast',
+          },
+          {
+            topics: 'Controversial Essay',
+          },
+          {
+            topics: 'Classification Essay',
+          },
+        ]
+      },
+      {
+        link: 'd',
+        content: [
+          {
+            topics: 'Definition Essay',
+          },
+          {
+            topics: 'Descriptive Essay',
+          },
+          {
+            topics: 'Deforestation Definition',
+          },
+        ]
+      },
+      {
+        link: 'e',
+        content: [
+          {
+            topics: 'Evaluation Essay',
+          },
+          {
+            topics: 'Exploratory Essay',
+          },
+          {
+            topics: 'Expository Essay',
+          },
+          {
+            topics: 'Exemplification Essay',
+          },
+        ]
+      },
+      {
+        link: 'f',
+        content: []
+      },
+      {
+        link: 'g',
+        content: [
+          {
+            topics: 'Good Research Essay',
+          },
+        ]
+      },
+      {
+        link: 'h',
+        content: [
+          {
+            topics: 'Help me write my essay',
+          },
+        ]
+      },
+      {
+        link: 'i',
+        content: [
+          {
+            topics: 'Informative Essay',
+          },
+        ]
+      },
+      {
+        link: 'j',
+        content: []
+      },
+      {
+        link: 'k',
+        content: []
+      },
+      {
+        link: 'l',
+        content: []
+      },
+      {
+        link: 'm',
+        content: []
+      },
+      {
+        link: 'n',
+        content: [
+          {
+            topics: 'Narrative Essay',
+          },
+        ]
+      },
+      {
+        link: 'o',
+        content: []
+      },
+      {
+        link: 'p',
+        content: [
+          {
+            topics: 'Personal Essay',
+          },
+          {
+            topics: 'Persuasive Essay',
+          },
+          {
+            topics: 'Problem Solution Essay',
+          },
+          {
+            topics: 'Process Essay',
+          },
+          {
+            topics: 'Proposal Essay',
+          },
+        ]
+      },
+      {
+        link: 'q',
+        content: []
+      },
+      {
+        link: 'r',
+        content: [
+          {
+            topics: 'Reflective Essay',
+          },
+          {
+            topics: 'Romeo & Juliet Essay',
+          },
+        ]
+      },
+      {
+        link: 's',
+        content: []
+      },
+      {
+        link: 't',
+        content: []
+      },
+      {
+        link: 'u',
+        content: []
+      },
+      {
+        link: 'v',
+        content: []
+      },
+      {
+        link: 'w',
+        content: []
+      },
+      {
+        link: 'x',
+        content: []
+      },
+      {
+        link: 'y',
+        content: []
+      },
+      {
+        link: 'z',
+        content: []
+      },
     ];
 
 block content
-  include partials/menu-mobile
-  include partials/navigation
+  .page__nav-wrap
+    include partials/menu-mobile
+    include partials/navigation
   .page
     .page__decor-block
 
@@ -103,71 +316,14 @@ block content
     .tab__wrap
       ul.tab
         each tab in tabLinks
-          li.tab__links #{tab}
+          li.tab__links #{tab.link}
 
-    .tab__content
-      each topic in topicsA
-        a(href='essay-page.html')
+    each letter in tabLinks
+      .tab__content
+        each topic in letter.content
+          a.tab__topics-links(href='essay-page.html')
             +topicsItem(topic)(class='tab__content-item')
 
-      each topic in topicsB
-        a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsC
-        a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsA
-        a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsB
-        a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsC
-        a(href='essay-page.html')
-          +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsA
-        a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsB
-        a(href='essay-page.html')
-          +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsC
-        a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsA
-        a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsB
-        a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-      each topic in topicsC
-        a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-    .tab__content
-        each topic in topicsA
-          a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-    .tab__content
-        each topic in topicsB
-          a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
-
-    .tab__content
-        each topic in topicsC
-          a(href='essay-page.html')
-            +topicsItem(topic)(class='tab__content-item')
 
   .page__need-wrap
     include partials/block-need
