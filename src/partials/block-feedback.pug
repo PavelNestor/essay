@@ -1,0 +1,58 @@
+include mixins
+
+
+-
+  var slides = [
+    {
+      src: '/img/block-feedback/customer-1.png',
+      alt: 'customer photo',
+      title: 'Stephen K., UK',
+      text: 'You did a really good job with my review. Writer’s interpretations are very interesting and original. Will recommend your website to my friends. I wish I could write papers like you!',
+    },
+    {
+      src: '/img/block-feedback/customer-2.png',
+      alt: 'customer photo',
+      title: 'Michelle P., USA',
+      text: 'Pass my compliments to the writer please! This is a really great paper. I appreciate your help a lot and will come back for more papers for sure! Thanks a lot!',
+    },
+    {
+      src: '/img/block-feedback/customer-3.png',
+      alt: 'customer photo',
+      title: 'Michelle, Canada',
+      text: 'The content as well as formatting are great! Thank you for fast delivery – I was worried about the short deadline I’ve had. It was important assignment and you helped me',
+    },
+    {
+      src: '/img/block-feedback/customer-1.png',
+      alt: 'customer photo',
+      title: 'Stephen K., UK',
+      text: 'You did a really good job with my review. Writer’s interpretations are very interesting and original. Will recommend your website to my friends. I wish I could write papers like you!',
+    },
+    {
+      src: '/img/block-feedback/customer-2.png',
+      alt: 'customer photo',
+      title: 'Michelle P., USA',
+      text: 'Pass my compliments to the writer please! This is a really great paper. I appreciate your help a lot and will come back for more papers for sure! Thanks a lot!',
+    },
+    {
+      src: '/img/block-feedback/customer-3.png',
+      alt: 'customer photo',
+      title: 'Michelle, Canada',
+      text: 'The content as well as formatting are great! Thank you for fast delivery – I was worried about the short deadline I’ve had. It was important assignment and you helped me',
+    },
+  ]
+
+
+.container.feedback
+
+  .feedback__content
+    h2.feedback__title
+      +title('Customer feedback')
+
+    .feedback__carousel
+      .feedback__slide.owl-carousel
+        each slide in slides
+          +slideItem(slide)
+    .round-btn.feedback__slide-btn.feedback__slide-btn_prev
+        img.btn__prev(src="/img/icons/sm-arrow.svg", alt="")
+    .round-btn.feedback__slide-btn.feedback__slide-btn_next
+        img.btn__next(src="/img/icons/sm-arrow.svg", alt="")

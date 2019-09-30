@@ -1,0 +1,328 @@
+extends partials/layout
+include partials/mixins
+
+block vars
+  - 
+    var title = "Topics"
+
+    var tabLinks = [
+      {
+        link: '#',
+        content: [
+          {
+            topics: 'Argumentative essay',
+          },
+          {
+            topics: 'Argument Essay Topics',
+          },
+          {
+            topics: 'Cause and Effect essay',
+          },
+          {
+            topics: 'Common App Essay',
+          },
+          {
+            topics: 'Compare and Contrast',
+          },
+          {
+            topics: 'Controversial Essay',
+          },
+          {
+            topics: 'Classification Essay',
+          },
+          {
+            topics: 'Definition Essay',
+          },
+          {
+            topics: 'Descriptive Essay',
+          },
+          {
+            topics: 'Deforestation Definition',
+          },
+          {
+            topics: 'Evaluation Essay',
+          },
+          {
+            topics: 'Exploratory Essay',
+          },
+          {
+            topics: 'Expository Essay',
+          },
+          {
+            topics: 'Exemplification Essay',
+          },
+          {
+            topics: 'Good Research Essay',
+          },
+          {
+            topics: 'Help me write my essay',
+          },
+          {
+            topics: 'Narrative Essay',
+          },
+          {
+            topics: 'Personal Essay',
+          },
+          {
+            topics: 'Persuasive Essay',
+          },
+          {
+            topics: 'Problem Solution Essay',
+          },
+          {
+            topics: 'Process Essay',
+          },
+          {
+            topics: 'Proposal Essay',
+          },
+          {
+            topics: 'Reflective Essay',
+          },
+          {
+            topics: 'Romeo & Juliet Essay',
+          },
+        ]
+      },
+      {
+        link: 'a',
+        content: [
+          {
+            topics: 'Argumentative essay',
+          },
+          {
+            topics: 'Argument Essay Topics',
+          },
+        ]
+      },
+      {
+        link: 'b',
+        content: []
+      },
+      {
+        link: 'c',
+        content: [
+          {
+            topics: 'Cause and Effect essay',
+          },
+          {
+            topics: 'Common App Essay',
+          },
+          {
+            topics: 'Compare and Contrast',
+          },
+          {
+            topics: 'Controversial Essay',
+          },
+          {
+            topics: 'Classification Essay',
+          },
+        ]
+      },
+      {
+        link: 'd',
+        content: [
+          {
+            topics: 'Definition Essay',
+          },
+          {
+            topics: 'Descriptive Essay',
+          },
+          {
+            topics: 'Deforestation Definition',
+          },
+        ]
+      },
+      {
+        link: 'e',
+        content: [
+          {
+            topics: 'Evaluation Essay',
+          },
+          {
+            topics: 'Exploratory Essay',
+          },
+          {
+            topics: 'Expository Essay',
+          },
+          {
+            topics: 'Exemplification Essay',
+          },
+        ]
+      },
+      {
+        link: 'f',
+        content: []
+      },
+      {
+        link: 'g',
+        content: [
+          {
+            topics: 'Good Research Essay',
+          },
+        ]
+      },
+      {
+        link: 'h',
+        content: [
+          {
+            topics: 'Help me write my essay',
+          },
+        ]
+      },
+      {
+        link: 'i',
+        content: [
+          {
+            topics: 'Informative Essay',
+          },
+        ]
+      },
+      {
+        link: 'j',
+        content: []
+      },
+      {
+        link: 'k',
+        content: []
+      },
+      {
+        link: 'l',
+        content: []
+      },
+      {
+        link: 'm',
+        content: []
+      },
+      {
+        link: 'n',
+        content: [
+          {
+            topics: 'Narrative Essay',
+          },
+        ]
+      },
+      {
+        link: 'o',
+        content: []
+      },
+      {
+        link: 'p',
+        content: [
+          {
+            topics: 'Personal Essay',
+          },
+          {
+            topics: 'Persuasive Essay',
+          },
+          {
+            topics: 'Problem Solution Essay',
+          },
+          {
+            topics: 'Process Essay',
+          },
+          {
+            topics: 'Proposal Essay',
+          },
+        ]
+      },
+      {
+        link: 'q',
+        content: []
+      },
+      {
+        link: 'r',
+        content: [
+          {
+            topics: 'Reflective Essay',
+          },
+          {
+            topics: 'Romeo & Juliet Essay',
+          },
+        ]
+      },
+      {
+        link: 's',
+        content: []
+      },
+      {
+        link: 't',
+        content: []
+      },
+      {
+        link: 'u',
+        content: []
+      },
+      {
+        link: 'v',
+        content: []
+      },
+      {
+        link: 'w',
+        content: []
+      },
+      {
+        link: 'x',
+        content: []
+      },
+      {
+        link: 'y',
+        content: []
+      },
+      {
+        link: 'z',
+        content: []
+      },
+    ];
+
+block content
+  .page__nav-wrap
+    include partials/menu-mobile
+    include partials/navigation
+  .page
+    .page__decor-block
+
+    .page__header
+      img.page__header-arrow(src="/img/icons/big-arrow.svg", alt="")
+      .page__name Topics
+
+      .page__social-wrap
+        .page__social.page__social-fb
+          .round-btn.page__btn.page__btn-fb
+            img.round-btn__img(src="/img/icons/fb.svg", alt="")
+          | 25
+        .page__social.page__social-twitter
+          .round-btn.page__btn.page__btn-twitter
+            img.round-btn__img(src="/img/icons/twitter.svg", alt="")
+          | 54
+        .page__social.page__social-telegram
+          .round-btn.page__btn.page__btn-telegram
+            img.round-btn__img(src="/img/icons/telegram.svg", alt="")
+          | 36
+
+    h1.page__title
+      +title('Hot Topics we can help with')
+
+    .page__content.page__content_right
+      .page__col.page__col_right
+        h5.page__col_right-title
+          +title('Get more than you expect')
+
+        p.page__text Presenting the list of your possible orders, here you can look through catalog oo writing essays and other types of academic papers - these are the most popular works among our clients. 
+
+      .page__col.page__col_right
+        .page__image-wrap.page__image-wrap_right
+          +picturePng('/img/page/topics', alt='Essay picture')(class='op-top')
+
+    .tab__wrap
+      ul.tab
+        each tab in tabLinks
+          li.tab__links #{tab.link}
+
+    each letter in tabLinks
+      .tab__content
+        each topic in letter.content
+          a.tab__topics-links(href='essay-page.html')
+            +topicsItem(topic)(class='tab__content-item')
+
+  .page__need-wrap.wow.clipInRight
+    include partials/block-need

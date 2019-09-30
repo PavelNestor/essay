@@ -29,14 +29,59 @@
     opacity: 0
     transform: translateY(-20px) translateX(-50%) translateZ(0)
 
+
+@keyframes HideList
+  from
+    transform: scaleY(1)
+  to
+    transform: scaleY(0)
+
+@keyframes drill
+  from
+    transform: rotate(0)
+  25%
+    transform: rotate(-15deg)
+  50%
+    transform: rotate(0)
+  75%
+    transform: rotate(15deg)
+  to
+    transform: rotate(0)
+
+@keyframes clip-out-right
+  from
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+  to
+    clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%)
+
+@keyframes clip-in-right
+  from
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%)
+  to
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)
+
+.drill
+  animation: drill .3s
+  animation-fill-mode: both
+  animation-iteration-count: 2
+
 .fadeIn
-  animation: fadeIn 0.3s
+  animation: fadeIn .3s
   animation-fill-mode: both
 
 .fadeOut
-  animation: fadeOut 0.3s
+  animation: fadeOut .3s
   animation-fill-mode: both
 
 .notification
   animation: notification 2s
   animation-fill-mode: both
+
+.clipOutRight
+  animation: clip-out-right 1s
+  animation-fill-mode: both
+
+.clipInRight
+  animation: clip-in-right 1s
+  animation-fill-mode: both
+  animation-timing-function: cubic-bezier(0, 0, 0.03, 1)

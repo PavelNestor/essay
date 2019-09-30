@@ -1,0 +1,80 @@
+include mixins
+
+-
+  var essays = [
+    {
+      title: 'The best students essay writing service from east to west!',
+      words: '826 Words',
+      date: 'Sep 17, 2018',
+      pages: '4 Pages',
+      text: 'Writing your successful essay! We make your writing dreams come true, bright and sound with our help 24/7! Get your order in few steps and succeed in a day! Our company helps you to edit, write and to add trustworthy references to your work! ...',
+    },
+    {
+      title: 'The best students essay writing service from east to west!',
+      words: '826 Words',
+      date: 'Sep 17, 2018',
+      pages: '4 Pages',
+      text: 'Writing your successful essay! We make your writing dreams come true, bright and sound with our help 24/7! Get your order in few steps and succeed in a day! Our company helps you to edit, write and to add trustworthy references to your work! ...',
+    },
+    {
+      title: 'The best students essay writing service from east to west!',
+      words: '826 Words',
+      date: 'Sep 17, 2018',
+      pages: '4 Pages',
+      text: 'Writing your successful essay! We make your writing dreams come true, bright and sound with our help 24/7! Get your order in few steps and succeed in a day! Our company helps you to edit, write and to add trustworthy references to your work! ...',
+    },
+    {
+      title: 'The best students essay writing service from east to west!',
+      words: '826 Words',
+      date: 'Sep 17, 2018',
+      pages: '4 Pages',
+      text: 'Writing your successful essay! We make your writing dreams come true, bright and sound with our help 24/7! Get your order in few steps and succeed in a day! Our company helps you to edit, write and to add trustworthy references to your work! ...',
+    },
+    {
+      title: 'The best students essay writing service from east to west!',
+      words: '826 Words',
+      date: 'Sep 17, 2018',
+      pages: '4 Pages',
+      text: 'Writing your successful essay! We make your writing dreams come true, bright and sound with our help 24/7! Get your order in few steps and succeed in a day! Our company helps you to edit, write and to add trustworthy references to your work! ...',
+    },
+  ]
+
+section.container.recent
+  .accent-block.accent-block_left.recent__accent-block
+  .recent__content
+    .recent__col
+      .recent__title-wrap
+        h2.recent__title
+          +title('Most recent essays')
+
+      .recent__essay-wrap
+        each essay in essays
+          +essay(essay.title, essay.words, essay.date, essay.pages, essay.text)(href='essay-page.html')
+
+      .recent__essay-top-btn-wrap.recent__essay-top-btn-wrap_mobile
+        .round-btn.round-btn_more
+          img.round-btn__img(src="/img/icons/sm-arrow.svg", alt="")
+        p.recent__essay-top-btn-text more essays
+
+    .recent__col
+      .recent__picture-cover
+        +picturePng('/img/block-recent/recent-girl', alt='Top essays')(class='op-top')
+      .recent__essay-top-block
+        h2.recent__essay-top-title
+          +title('Top essays')
+
+      .recent__essay-top-essay
+        +essayTop(essays[0].title, essays[0].words, essays[0].date, essays[0].pages, essays[0].text)
+
+      .recent__essay-top-btn-wrap.recent__essay-top-btn-wrap_desktop
+        .round-btn
+          img.round-btn__img(src="/img/icons/sm-arrow.svg", alt="")
+        p.recent__essay-top-btn-text more essays
+
+      .need-block.recent__essay-need-block.wow.clipInRight
+        h2.recent__essay-need-title 
+          | Need a custom
+          br 
+          | essay?
+
+        a.main-btn.recent__order-btn(href="#") Order Now

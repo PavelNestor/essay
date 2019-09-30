@@ -1,0 +1,100 @@
+extends partials/layout
+include partials/mixins
+
+block vars
+  -
+    var title = 'Plagiarism checker';
+
+    var faqs = [
+      {
+        title: 'Who Can Use Online Checker? Is plagiarism checker only for college students?',
+        text: 'Simplicity and speed are the primary advantages of our free online plagiarism checker and editor. You don\'t waste even a minute of your precious time because the examination of the text proceeds within seconds. When you click to begin checking, a small spinning round is all that you see. However, while you are waiting, a huge amount of work is being done by our powerful online detection systems and complicated algorithms. Although the scanners work automatically, our programmers had to go to great length to create this plagiarism checker tools. Due to those sophisticated technologies, our users may benefit from a variety of advantages.'
+      },
+      {
+        title: 'What plagiarism checker is best? Benefits of our free plagiarism detection tool',
+        text: 'Simplicity and speed are the primary advantages of our free online plagiarism checker and editor. You don\'t waste even a minute of your precious time because the examination of the text proceeds within seconds. When you click to begin checking, a small spinning round is all that you see. However, while you are waiting, a huge amount of work is being done by our powerful online detection systems and complicated algorithms. Although the scanners work automatically, our programmers had to go to great length to create this plagiarism checker tools. Due to those sophisticated technologies, our users may benefit from a variety of advantages.'
+      },
+      {
+        title: 'Which plagiarism checker is reliable and have no word limit?',
+        text: 'Simplicity and speed are the primary advantages of our free online plagiarism checker and editor. You don\'t waste even a minute of your precious time because the examination of the text proceeds within seconds. When you click to begin checking, a small spinning round is all that you see. However, while you are waiting, a huge amount of work is being done by our powerful online detection systems and complicated algorithms. Although the scanners work automatically, our programmers had to go to great length to create this plagiarism checker tools. Due to those sophisticated technologies, our users may benefit from a variety of advantages.'
+      },
+      {
+        title: 'What can Online Checker with percentage do?',
+        text: 'Simplicity and speed are the primary advantages of our free online plagiarism checker and editor. You don\'t waste even a minute of your precious time because the examination of the text proceeds within seconds. When you click to begin checking, a small spinning round is all that you see. However, while you are waiting, a huge amount of work is being done by our powerful online detection systems and complicated algorithms. Although the scanners work automatically, our programmers had to go to great length to create this plagiarism checker tools. Due to those sophisticated technologies, our users may benefit from a variety of advantages.'
+      },
+      {
+        title: 'Is this plagiarism checker safe?',
+        text: 'Simplicity and speed are the primary advantages of our free online plagiarism checker and editor. You don\'t waste even a minute of your precious time because the examination of the text proceeds within seconds. When you click to begin checking, a small spinning round is all that you see. However, while you are waiting, a huge amount of work is being done by our powerful online detection systems and complicated algorithms. Although the scanners work automatically, our programmers had to go to great length to create this plagiarism checker tools. Due to those sophisticated technologies, our users may benefit from a variety of advantages.'
+      },
+      {
+        title: 'How to check for plagiarism for free with our tool?',
+        text: 'Simplicity and speed are the primary advantages of our free online plagiarism checker and editor. You don\'t waste even a minute of your precious time because the examination of the text proceeds within seconds. When you click to begin checking, a small spinning round is all that you see. However, while you are waiting, a huge amount of work is being done by our powerful online detection systems and complicated algorithms. Although the scanners work automatically, our programmers had to go to great length to create this plagiarism checker tools. Due to those sophisticated technologies, our users may benefit from a variety of advantages.'
+      }
+    ];
+
+block content
+  .page__nav-wrap
+    include partials/menu-mobile
+    include partials/navigation
+  .page
+    .page__decor-block
+
+    .page__header
+      img.page__header-arrow(src="/img/icons/big-arrow.svg", alt="")
+      .page__name Plagiarism checker
+
+      .page__social-wrap
+        .page__social.page__social-fb
+          .round-btn.page__btn.page__btn-fb
+            img.round-btn__img(src="/img/icons/fb.svg", alt="")
+          | 25
+        .page__social.page__social-twitter
+          .round-btn.page__btn.page__btn-twitter
+            img.round-btn__img(src="/img/icons/twitter.svg", alt="")
+          | 54
+        .page__social.page__social-telegram
+          .round-btn.page__btn.page__btn-telegram
+            img.round-btn__img(src="/img/icons/telegram.svg", alt="")
+          | 36
+
+    h1.page__title Check your paper for plagiarism right now!
+
+    .page__content.page__content_right
+      .page__col.page__col_right
+        h5.page__col_right-title Are you working with content?
+
+        p.page__text Our free online plagiarism checker has a high level of accuracy offering you the exact uniqueness percentage and will help you avoid major problems with your texts. 
+        p.page__text Upload your content for free and observe the result in a few seconds!
+
+      .page__col.page__col_right
+        form.checker__form(action='#')
+          input.checker__form-input(type="text", placeholder='Place Your Title Here')
+          textarea.checker__form-input.checker__form-input_textarea(type="text", placeholder='Paste Your Text Here')
+
+          .upload.checker__form-input.checker__form-input_upload
+
+          .checker__form-wrap
+            button.main-btn.checker__form-btn(type='submit') Check My Essay
+            p.checker__form-wrap-text By clicking Check My Essay you agree to our 
+              a.checker__form-wrap-text_red(href='#') Terms
+            //- img.round-btn.checker__form-btn-img(src="/img/icons/btn-arrow.svg", alt="")
+
+    .services__content.checker__content
+      h5.services__subtitle Plagiarism checker online & free for students
+
+      p.page__text The Internet is a huge self-controlled space with tons of information replenishing every day and every minute. If earlier it was almost impossible to detect who has plagiarized sentences from books, in our modern-day world a cheater can be identified in mere seconds. This is now possible due to the cutting-edge free online plagiarism checker for students and teachers. Whether you are a teacher or a student, examining papers before submitting them has become a must. Even if you haven't used any information from the Internet, are you sure that nobody has used similar words before you? Just check your essay with our plagiarism checker without word limit free to be sure!
+
+    .faq__content.services__content.checker__faq
+      .checker__video-wrap
+        iframe(width='100%', height='415', src='https://www.youtube.com/embed/tgbNymZ7vqY')
+
+      each faq in faqs
+        +faqItem(faq)(class='faq__item checker__faq-item')
+
+    .services__content
+      h5.services__subtitle Comparison between StudyMoose plagiarism checker and SafeAssign checker
+
+      p.page__text StudyMoose's Plagiarism Checker is both free and easy to use. It is not so with all plagiarism checkers offered online. For instance, the SafeAssign online plagiarism checker makes it difficult to understand where exactly one should upload the paper. If there are difficulties with the similarity index, a student might order online help on Studymoose, while SafeAssign for students free cannot offer any help. Also, it may be better to use StudyMoose rather than SafeAssign as professors also utilize our tool. Thus, after checking the paper here you can be 100% sure that no new plagiarism issues will appear when your teacher examines it too.
+
+  .page__need-wrap.wow.clipInRight
+    include partials/block-need

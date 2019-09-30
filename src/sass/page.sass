@@ -1,0 +1,555 @@
+.page
+  position: relative
+
+  &__nav-wrap
+    height: 12rem
+
+    @media #{$media-md-up}
+      height: 6rem
+
+  &__decor-block
+    width: 7vw
+    height: 100%
+    background: $color_bg-grey
+    position: absolute
+    z-index: -1
+
+  &__header
+    padding: 4.4rem 3.9rem 1.6rem
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-wrap: wrap
+
+    @media #{$media-sm-plus-up}
+      padding: 4.2rem 9.5rem 1rem 3.5vw
+
+    &-arrow
+      height: 2rem
+
+      @media #{$media-sm-plus-up}
+        height: auto
+
+  &__essay-detail
+    margin-left: 4.4rem
+
+  &__name
+    font-weight: 900
+    font-size: 2rem
+    line-height: 1.8em
+    font-family: $font-family-accent
+    color: $color_black
+    margin-left: 4.4rem
+
+    @media #{$media-sm-plus-up}
+      margin-left: calc(7.5vw - 8.5rem)
+
+  &__social-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    margin: 0
+    padding: 4rem 0 0
+
+    @media #{$media-sm-plus-up}
+      width: fit-content
+      margin: 0 1rem 0 auto
+      padding: 0
+
+  &__social
+    color: $color_black
+    font-weight: bold
+    font-size: 1.4rem
+    line-height: 2em
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 1rem
+
+  &__btn
+    margin-right: .5rem
+
+  &__btn-fb
+    background: #3A559F
+
+  &__btn-twitter
+    background: #55ACEE
+
+  &__btn-telegram
+    background: #41B4E6
+    padding: 0.7rem 0.7rem 0.7rem 0.4rem
+
+    @media #{$media-sm-plus-up}
+      padding: 1.2rem 1.2rem 1.2rem 1rem
+
+  &__subtitle
+    font-size: 3rem
+
+    @media #{$media-sm-plus-up}
+      font-size: 4rem
+      margin-top: 3rem
+      margin-bottom: 3.4rem
+
+  &__title
+    margin-left: 10vw
+    margin-bottom: 4rem
+
+    @media #{$media-sm-plus-up}
+      margin: .4rem 20rem 8rem 11vw
+      font-size: 6rem
+
+  &__content
+    display: flex
+    flex-direction: column
+    padding-bottom: 10rem
+
+    @media #{$media-sm-plus-up}
+      flex-direction: row
+
+    &_right
+      padding-left: 0
+      padding-bottom: 0
+
+      @media #{$media-sm-plus-up}
+        padding-left: 7vw
+
+      @media #{$media-md-plus-up}
+        padding-left: 11vw
+
+  &__image-wrap
+    position: relative
+    height: 50vh
+
+    //height: 100vh TODO for horizontal 
+
+    @media #{$media-sm-plus-up}
+      height: auto
+
+    @media #{$media-lg-up}
+      height: 70rem
+
+    &::after
+      content: ''
+      position: absolute
+      width: 2px
+      transform: rotate(-21deg)
+      background: $color_accent
+      height: 7rem
+      bottom: -3.5rem
+      right: 5vw
+
+      @media #{$media-sm-plus-up}
+        right: 3vw
+
+    &_right
+      height: 100%
+
+      @media #{$media-lg-up}
+        height: 45rem
+
+  &__image
+    position: relative
+
+  &__text
+    font-size: 1.4rem
+    line-height: 1.8em
+    color: $color_page-text
+
+    @media #{$media-sm-plus-up}
+      font-size: 1.6rem
+      line-height: 1.9em
+      margin-top: .4rem
+      margin-bottom: 1rem
+
+    &_first
+      margin-top: 0
+
+    &_bold
+      font-weight: bold
+      margin: 3rem 0
+
+  &__list
+    margin: 0
+
+  &__list-item
+    background: url(/img/page/list-img.svg) no-repeat left .8rem
+    font-size: 1.6rem
+    line-height: 1.9em
+    margin-bottom: 1.2rem
+    margin-left: -0.1rem
+    padding-left: 3.5rem
+    color: $color_page-text
+
+  &__col
+    flex-basis: 50%
+    padding-right: 0
+    padding-left: 0
+
+    @media #{$media-sm-plus-up}
+      padding-left: 0
+      padding-right: 10vw
+
+    &:nth-child(1)
+      padding-left: 0
+
+      @media #{$media-sm-plus-up}
+        padding-left: 0
+
+    &:nth-child(2)
+      padding-left: 14vw
+      padding-top: 4rem
+      padding-right: 7vw
+
+      @media #{$media-sm-plus-up}
+        padding-left: 0
+        padding-top: 0
+
+    &_right
+      &:nth-child(1)
+        flex-basis: 33%
+        background: $color_bg-grey-two
+        padding: 2rem
+        padding-left: 10vw
+
+        @media #{$media-sm-plus-up}
+          padding: 7.8rem 4.7rem 10rem
+
+      &:nth-child(2)
+        flex-basis: 66%
+        padding: 0
+
+        @media #{$media-sm-plus-up}
+
+      &-title
+        font-size: 3rem
+        line-height: 1em
+        margin-bottom: 3rem
+        padding-right: 6rem
+
+  &__need-wrap
+    padding-left: 7vw
+    display: flex
+    justify-content: flex-end
+
+    @media #{$media-sm-plus-up}
+      padding-left: 0
+
+// Essay page
+.essay-page
+  position: relative
+  margin-bottom: 5rem
+
+  &__dots
+    display: inline
+    color: $color_accent
+    font-size: 1.6rem
+    position: absolute
+    bottom: -3.2rem
+    left: 0
+    cursor: pointer
+    
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 18%)
+    pointer-events: none
+
+  &.active
+    &::after
+      background: none
+
+    &.hidden
+      display: none
+
+  &__more
+    display: none
+
+    &.active
+      display: inline
+
+.related
+  background: $color_bg-grey-two
+  padding: 5rem 0 6rem 7vw
+
+  @media #{$media-sm-plus-up}
+    padding: 5rem 12.2rem 6rem
+
+  &__subtitle
+    font-size: 2rem
+
+  &__title
+    font-size: 4rem
+    position: relative
+
+    &::before
+      content: ''
+      position: absolute
+      width: 2px
+      transform: rotate(-21deg)
+      background: $color_accent
+      height: 5rem
+      bottom: 6rem
+      left: 2rem
+
+  &__col
+    background: $color_white
+    padding: 3rem 2rem
+    flex-basis: 49%
+
+    @media #{$media-sm-plus-up}
+      padding: 3rem 5rem
+
+    &:nth-child(1)
+      margin-right: 0
+      margin-bottom: 2rem
+
+      @media #{$media-sm-plus-up}
+        margin-bottom: 0
+        margin-right: 2rem
+
+  &__content
+    display: flex
+    flex-direction: column
+
+    @media #{$media-sm-plus-up}
+      flex-direction: row
+
+.popular
+  padding: 5rem 2vw 5rem 14vw
+
+  @media #{$media-sm-plus-up}
+    padding: 5rem 10vw
+
+  &__col
+    flex-basis: 100%
+
+    @media #{$media-sm-up}
+      flex-basis: 50%
+
+    @media #{$media-md-up}
+      flex-basis: 33%
+
+    &:nth-child(3)
+      display: none
+
+      @media #{$media-sm-up}
+        display: block
+
+    &:nth-child(2)
+      display: none
+
+      @media #{$media-sm-plus-up}
+        display: block
+
+.tab
+  display: flex
+  margin-top: 5rem
+  flex-wrap: wrap
+
+  &__wrap
+    padding-left: 10vw
+
+    @media #{$media-md-plus-up}
+      padding-left: 11vw
+
+  &__topics-links
+    .hot__topics-text
+      font-size: 1.6rem
+
+      @media #{$media-md-plus-up}
+        font-size: 2rem
+
+  &__content
+    padding-left: 14vw
+    display: flex
+    flex-wrap: wrap
+    padding-bottom: 10rem
+    padding-right: 7vw
+    flex-wrap: wrap
+
+    @media #{$media-md-plus-up}
+      padding-right: 28rem
+      padding-left: 11vw
+
+    &-item
+      width: 80vw
+
+      @media #{$media-sm-up}
+        width: 40vw
+
+      @media #{$media-md-plus-up}
+        width: 30vw
+
+  &__links
+    font-size: 1.6rem
+    line-height: 1.8em
+    color: $color_accent
+    margin-right: 1rem
+    text-transform: uppercase
+    cursor: pointer
+    padding: 0 .9rem
+    font-weight: bold
+
+    &.active
+      background: $color_primary
+      color: $color_white
+
+.services
+  &__content 
+    padding: 5rem 7vw 10rem 14vw
+
+    @media #{$media-md-plus-up}
+      padding: 4.8rem 33vw 8.6rem 11vw
+
+  &__form
+    position: relative
+    right: 0
+    top: 0
+    padding: 0
+
+    .card-small__header::before
+      top: -10rem
+      bottom: 0
+      left: 1.2rem
+      width: 2px
+      margin-bottom: 0
+      height: 6rem
+
+  &__list
+    margin-top: 3rem
+
+  &__subtitle
+    font-size: 2rem
+    margin: 3rem 0
+
+    @media #{$media-md-plus-up}
+      font-size: 4rem
+      line-height: 1.15em
+
+.checker
+  &__form
+    height: 100%
+    background: $color_bg-grey
+    padding: 5rem 2rem 7rem 10vw
+
+    @media #{$media-sm-plus-up}
+      padding: 5.3rem 9.7rem 4.4rem 15rem
+
+    &-btn
+      width: fit-content
+      padding: 1.2rem 7rem 1.2rem 3rem
+      font-size: 1.4rem
+      text-align: center
+      display: flex
+      justify-content: center
+      height: auto
+      align-items: center
+      position: relative
+      border: none
+      box-shadow: none
+      float: left
+      background: url('/img/icons/btn-arrow.svg') no-repeat calc(100% - 1.4rem), $color_accent
+
+      &:hover
+        background: url('/img/icons/btn-arrow.svg') no-repeat calc(100% - 1.4rem), $color_btn-hover
+
+    &-wrap
+      margin-bottom: 5rem
+
+      &-text
+        float: right
+        font-size: 1.22rem
+        margin-top: 1rem
+
+        &_red
+          color: $color_accent
+
+
+    &-input
+      width: 100%
+      line-height: 2em
+      font-size: 1.4rem
+      border: none
+      box-shadow: none
+      border-radius: 5px
+      text-align: center
+      margin-bottom: 2rem
+      padding: .6rem
+
+      &_upload
+        background: $color_white
+        border-radius: 20px
+        border: 1px dashed $color_page-text
+        height: 9rem
+        margin-bottom: 1.5rem
+
+      &_textarea
+        resize: none
+        height: 12rem
+        margin-bottom: 1.7rem
+
+  &__content
+    padding-bottom: 25.6rem
+    padding-right: 7vw
+
+    @media #{$media-md-plus-up}
+      padding-bottom: 24.4rem
+      padding-right: 32vw
+
+  &__video-wrap
+    position: absolute
+    top: -21rem
+    left: 7vw
+    right: 2rem
+
+    @media #{$media-md-plus-up}
+      left: 20.5vw
+      right: 19.3vw
+
+  &__faq
+    background: $color_bg-grey-two
+    padding: 35rem 2rem 9rem 7vw
+    position: relative
+
+    @media #{$media-xxs-up}
+      padding: 25rem 2rem 9rem 7vw
+
+    @media #{$media-sm-up}
+      padding: 20rem 2rem 9rem 7vw
+
+    @media #{$media-md-plus-up}
+      padding: 28.2rem 7.4vw 9rem 11vw
+
+    &-item
+      padding: 1.3rem 3.8rem
+
+.fs-upload-target
+  font-weight: bold
+  color: $color_primary
+  padding-top: 0.6rem
+  z-index: -1
+
+  &:before
+    content: 'Or upload your file: .pdf, .docx, .txt.'
+    display: block
+    font-weight: normal
+    margin-bottom: -2px
+
+.fs-upload
+  position: relative
+
+.fs-upload-input
+  // display: none
+  opacity: 0
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  z-index: 1

@@ -1,1 +1,26 @@
-nav.navbar
+nav.navbar.container.container_left.container_right
+  #burger.navbar__burger-wrap
+    img.navbar__burger(src="/img/icons/burger.svg", alt="Menu")
+
+  include logo
+
+  ul.menu
+    li.menu__item 
+      a(href='about-page.html') About us
+    li.menu__item 
+      a(href='services-page.html') Our services
+    li.menu__item 
+      a(href='topics-page.html') Topics
+    li.menu__item 
+      a(href='#contact') Contact
+    li.menu__item 
+      a(href='#') Prices
+    li.menu__item 
+      a(href='checker-page.html') Plagiarism checker
+
+  .search
+    img.search__img.mr-0_6(src="/img/icons/search.svg", alt="Search")
+
+  .menu__btn-wrapp
+    a.main-btn.menu__btn(href="#") Order now
+    a.main-btn.main-btn_black.menu__btn(href="#") Login

@@ -1,0 +1,49 @@
+.feedback
+  background: $color_bg-grey-two
+  padding: $padding
+  overflow-x: hidden
+
+  @media #{$media-sm-up}
+    padding: 26.4rem 7vw 10rem
+
+  &__content
+    background: $color_white
+    padding: 5.9rem 3rem 0
+    position: relative
+
+    @media #{$media-sm-up}
+      padding: 5rem 7.5rem 12rem
+
+  &__title
+    font-size: 3.5rem
+    line-height: 1.1em
+    margin-bottom: 4.2rem
+
+    @media #{$media-sm-up}
+      font-size: 6rem
+
+  &__slide
+
+  &__carousel
+    // position: relative
+
+  &__slide-btn
+    position: absolute
+    top: 50%
+    z-index: 10
+    cursor: pointer
+    width: 4rem
+    height: 4rem
+    padding: 1.2rem
+
+    &_prev
+      left: -2rem
+
+      @media #{$media-sm-up}
+        left: -1.5rem
+
+    &_next
+      right: -2rem
+
+      @media #{$media-sm-up}
+        right: -1.5rem

@@ -1,0 +1,23 @@
+include mixins
+
+#menu-mobile.container.menu-mobile
+  .menu-mobile__header
+    #burger-close.menu-mobile__burger-wrap
+      img#burger-close.menu-mobile__burger(src="/img/icons/burger.svg", alt="menu")
+    //- img.menu-mobile__logo(src="/img/logo.svg",, alt="logo")
+    include logo
+
+  .menu-mobile__content
+    ul.menu-mobile__list
+      li.menu-mobile__item
+        a.menu-mobile__link(href="about-page.html") About us
+      li.menu-mobile__item
+        a.menu-mobile__link(href="services-page.html") Our services
+      li.menu-mobile__item
+        a.menu-mobile__link(href="topics-page.html") Topics
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#contact") Contact
+      li.menu-mobile__item
+        a.menu-mobile__link(href="#") Prices
+      li.menu-mobile__item
+        a.menu-mobile__link(href="checker-page.html") Plagiarism checker

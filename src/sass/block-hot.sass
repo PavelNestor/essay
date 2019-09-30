@@ -1,0 +1,166 @@
+.hot
+  position: relative
+  padding-left: 0
+  padding-bottom: 0
+
+  @media #{$media-sm-plus-up}
+    padding-right: 6.8vw
+
+  @media #{$media-md-up}
+    padding-bottom: 15rem
+
+  &__picture-cover
+    height: 36vh
+    object-position: top
+
+    @media #{$media-xs-up}
+      height: 54vh
+
+    @media #{$media-md-up}
+      height: auto
+
+  &__content
+    display: flex
+    flex-direction: column
+
+    @media #{$media-md-up}
+      flex-direction: row
+
+  &__title-wrap
+    padding-right: 3rem
+
+    @media #{$media-sm-plus-up}
+      padding-right: 8rem
+
+  &__btn-more
+    margin-left: 2.1rem
+    margin-right: 0
+
+  &__title
+    font-size: 3.5rem
+    line-height: 1.15em
+    margin-bottom: 3.7rem
+
+    @media #{$media-sm-plus-up}
+      font-size: 6rem
+      line-height: 1em
+      margin-bottom: 3.5rem
+
+  &__more
+    &-wrap
+      padding-right: 2rem
+      margin-top: 3.3rem
+
+      @media #{$media-sm-plus-up}
+        padding-left: 9rem
+
+    &-need-block
+      background: $color_bg-yellow
+      padding: 3.2rem 2rem 3.7rem 4.2rem
+      position: static
+      margin-left: -8vw
+      z-index: 1
+
+      @media #{$media-sm-up}
+        padding: 4rem 30vw 4rem 17rem
+
+      @media #{$media-md-up}
+        padding: 4rem 5vw 4rem 17rem
+        position: absolute
+        bottom: -10rem
+        right: 0
+        width: 48vw
+
+      @media #{$media-md-plus-up}
+        padding: 4rem 5vw 4.5rem 16.6rem
+
+    &-need-title
+      font-size: 3rem
+      line-height: 1.15em
+      margin-bottom: 2rem
+
+      @media #{$media-md-plus-up}
+        font-size: 5rem
+        line-height: 1em
+        margin-bottom: 3rem
+
+    &-btn-wrap
+      margin: 9rem 5rem 5rem auto
+      display: flex
+      flex-direction: column
+      width: fit-content
+      justify-content: center
+      align-items: center
+
+      &_desktop
+        display: none
+
+        @media #{$media-md-up}
+          margin-top: 5rem
+          display: flex
+
+      &_mobile
+        display: flex
+        align-items: flex-start
+        // width: 100%
+        margin: 2rem auto 4.5rem 0
+
+        @media #{$media-md-up}
+          display: none
+
+    &-btn-text
+      margin: 0
+      font-family: $font-family_accent
+
+  &__topics
+    &-wrap
+      display: flex
+
+    &-col
+      @media #{$media-sm-plus-up}
+        flex-basis: 50%
+      &:nth-child(2)
+        display: none
+        @media #{$media-md-plus-up}
+          display: block
+
+    &-item
+    &-text
+      display: inline-block
+      font-size: 2rem
+      line-height: 1.2em
+      color: $color_primary
+      margin-bottom: 1.6rem
+
+    &-arrow
+      display: inline-block
+      margin: 0 1rem
+      width: fit-content
+
+  &__order-btn
+    padding: 1rem 3.5rem
+
+    @media #{$media-sm-plus-up}
+      padding: 1rem 2.5rem
+
+  &__col
+    &:nth-child(2)
+      padding: 5.1rem 0 0 14.3vw
+      flex-basis: 100%
+
+      @media #{$media-md-up}
+        flex-basis: 60%
+        padding-top: 9.9rem
+        padding-left: 8rem
+
+    &:nth-child(1)
+      flex-basis: 100%
+      padding-right: 0
+
+      @media #{$media-md-up}
+        padding-left: 0
+        flex-basis: 50%
+
+      @media #{$media-md-plus-up}
+        padding-right: 4.4vw
+        flex-basis: 40%

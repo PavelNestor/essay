@@ -1,0 +1,129 @@
+include mixins
+
+-
+  var topicsOne = [
+    {
+      topics: 'Argumentative essay',
+    },
+    {
+      topics: 'Argument Essay Topics',
+    },
+    {
+      topics: 'Cause and Effect essay',
+    },
+    {
+      topics: 'Common App Essay',
+    },
+    {
+      topics: 'Compare and Contrast',
+    },
+    {
+      topics: 'Exploratory Essay',
+    },
+    {
+      topics: 'Expository Essay',
+    },
+    {
+      topics: 'Exemplification Essay',
+    },
+    {
+      topics: 'Informative Essay',
+    },
+    {
+      topics: 'Narrative Essay',
+    },
+    {
+      topics: 'Personal Essay',
+    },
+    {
+      topics: 'Persuasive Essay',
+    },
+    {
+      topics: 'Problem Solution Essay',
+    },
+    {
+      topics: 'Process Analysis Essay',
+    },
+  ];
+
+  var topicsTwo = [
+    {
+      topics: 'Controversial Essay',
+    },
+    {
+      topics: 'Definition Essay',
+    },
+    {
+      topics: 'Descriptive Essay',
+    },
+    {
+      topics: 'Evaluation Essay',
+    },
+    {
+      topics: 'Process Essay',
+    },
+    {
+      topics: 'Proposal Essay',
+    },
+    {
+      topics: 'Reflective Essay',
+    },
+    {
+      topics: 'Satire Essay',
+    },
+    {
+      topics: 'Romeo & Juliet Essay',
+    },
+    {
+      topics: 'Help me write my essay',
+    },
+    {
+      topics: 'Deforestation Definition',
+    },
+    {
+      topics: 'Classification Essay',
+    },
+    {
+      topics: 'Good Research Essay',
+    },
+  ]
+
+section.container.hot
+  .accent-block.accent-block_right
+  .hot__content
+    .hot__col
+      .hot__picture-cover
+        +picturePng('/img/block-hot/hot-img', alt='Hot Topics we can help with.')(class='op-top')
+        
+      .hot__more-btn-wrap.hot__more-btn-wrap_desktop
+        .round-btn
+          img.round-btn__img(src="/img/icons/sm-arrow.svg", alt="")
+        p.hot__more-btn-text more essays
+
+    .hot__col
+      .hot__title-wrap
+        h2.hot__title
+          +title('Hot Topics we can help with')
+
+      .hot__topics-wrap
+        .hot__topics-col
+          each topic in topicsOne
+            a(href='essay-page.html')
+              +topicsItem(topic)
+
+        .hot__topics-col
+          each topic in topicsTwo
+            a(href='essay-page.html')
+              +topicsItem(topic)
+
+      .hot__more-btn-wrap.hot__more-btn-wrap_mobile
+        .round-btn.round-btn_more.hot__btn-more
+          img.round-btn__img(src="/img/icons/sm-arrow.svg", alt="")
+        p.hot__more-btn-text more topics
+
+      .hot__more-need-block.wow.clipInRight
+        h2.hot__more-need-title
+          | Need a custom
+          br 
+          | essay?
+        a.main-btn.hot__order-btn(href="#") Order Now

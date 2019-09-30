@@ -1,0 +1,175 @@
+.recent
+  position: relative
+  padding-left: 0
+  padding-bottom: 0
+
+  @media #{$media-sm-plus-up}
+    padding-left: 11.7vw
+
+  @media #{$media-md-up}
+    padding-bottom: 15rem
+
+  &__accent-block
+    height: calc(100% - 54vh - 36rem)
+
+    @media #{$media-sm-plus-up}
+      top: -11rem
+      height: 40rem
+
+  &__picture-cover
+    height: 36vh
+    object-position: top
+
+    @media #{$media-xs-up}
+      height: 54vh
+
+    @media #{$media-md-up}
+      height: auto
+
+
+  &__content
+    display: flex
+    flex-direction: column
+
+    @media #{$media-md-up}
+      flex-direction: row
+
+  &__title-wrap
+    padding-right: 2rem
+
+    @media #{$media-sm-plus-up}
+      padding-right: 20rem
+
+  &__title
+    font-size: 3.5rem
+    line-height: 1.1em
+
+    @media #{$media-sm-plus-up}
+      font-size: 6rem
+      line-height: 1.05em
+      margin-bottom: 6.4rem
+
+  &__essay
+    &-wrap
+      padding-right: 2rem
+      margin-top: 3.3rem
+
+      @media #{$media-sm-plus-up}
+        padding-right: 9rem
+
+    &-top-block
+      display: none
+
+      @media #{$media-md-up}
+        display: block
+        background: $color_bg-grey
+        padding: 6rem 2rem 3rem 5rem
+
+    &-need-block
+      background: $color_bg-yellow
+      padding: 3rem 2rem 3rem 4rem
+      position: static
+      width: 100%
+
+      @media #{$media-sm-up}
+        padding: 4rem 30vw 4rem 17rem
+
+      @media #{$media-md-up}
+        padding: 4rem 3vw 4rem 16.5rem
+        position: absolute
+        bottom: -16.5rem
+        right: 0
+        width: 48vw
+
+      @media #{$media-md-plus-up}
+        padding: 4rem 5vw 5rem 16.5rem
+
+    &-top-title
+      font-size: 4rem
+      line-height: 1em
+      position: relative
+
+      @media #{$media-md-plus-up}
+        &::before
+          content: ''
+          position: absolute
+          width: 3px
+          transform: rotate(-21deg)
+          background: $color_accent
+          height: 5rem
+          bottom: 7.5rem
+          left: 2rem
+
+    &-need-title
+      font-size: 3rem
+      line-height: 1.2em
+      margin-bottom: 1.7rem
+
+      @media #{$media-md-plus-up}
+        font-size: 5rem
+        margin-bottom: 3rem
+        line-height: 1em
+
+    &-top-essay
+      display: none
+
+      @media #{$media-md-up}
+        display: block
+        padding: 6.2rem 15.6rem 2.8rem 5.5rem
+
+    &-top-btn-wrap
+      margin-left: 5.5rem
+      display: flex
+      flex-direction: column
+      width: fit-content
+      justify-content: center
+      align-items: center
+
+      &_desktop
+        display: none
+
+        @media #{$media-md-up}
+          margin-top: 5rem
+          display: flex
+
+        @media #{$media-md-plus-up}
+          margin-top: 0
+
+      &_mobile
+        display: flex
+        margin-top: -2.5rem
+        align-items: flex-end
+        width: 100%
+        padding-right: 1.7rem
+        margin-left: 0
+        margin-bottom: 5rem
+
+        @media #{$media-md-up}
+          display: none
+
+    &-top-btn-text
+      margin: 0
+
+  &__order-btn
+    padding: 1rem 3.6rem
+
+    @media #{$media-sm-plus-up}
+      padding: 1rem 2.5rem
+
+  &__col
+    &:nth-child(1)
+      padding-top: 5.4rem
+      flex-basis: 100%
+      padding-left: 14.6vw
+
+      @media #{$media-md-up}
+        flex-basis: 54%
+        padding: 9.8rem 0 0
+
+    &:nth-child(2)
+      flex-basis: 100%
+      padding-left: $padding
+
+      @media #{$media-md-up}
+        padding-left: 0
+        flex-basis: 46%
